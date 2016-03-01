@@ -40,7 +40,7 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 ##Mutable Rules
 
-**201.** Players may submit one proposal per player every twenty-four (24) hours, in any player order. Each proposal will remain for the 24 hour period to be voted on and discussed. At the end of the 24 hour period, the rule is either adopted, or rejected.
+**201.** Each player may submit one proposal every twenty-four (24) hours, in any player order. Each proposal will remain for the 24 hour period to be voted on and discussed. At the end of the 24 hour period, the rule is either adopted, or rejected.
 
 **202.** One turn consists of two parts in this order: (1) proposing one rule-change and having it voted on, and (2) throwing one die once and adding the number of points on its face to one's score.
 
@@ -85,4 +85,6 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 **213.** If the rules are changed so that further play is impossible, or if the legality of a move cannot be determined with finality, or if by the Judge's best reasoning, not overruled, a move appears equally legal and illegal, then the first player unable to complete a turn is the winner.
 
 This rule takes precedence over every other rule determining the winner.
+
+**301.** This rule is a modifier of rule 201.
 
