@@ -40,9 +40,7 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 ##Mutable Rules
 
-**201.** Players shall alternate in clockwise order, taking one whole turn apiece. Turns may not be skipped or passed, and parts of turns may not be omitted. All players begin with zero points.
-
-In mail and computer games, players shall alternate in alphabetical order by surname.
+**201.** Players may submit one proposal per player every twenty-four (24) hours, in any player order. Each proposal will remain for the 24 hour period to be voted on and discussed. At the end of the 24 hour period, the rule is either adopted, or rejected.
 
 **202.** One turn consists of two parts in this order: (1) proposing one rule-change and having it voted on, and (2) throwing one die once and adding the number of points on its face to one's score.
 
