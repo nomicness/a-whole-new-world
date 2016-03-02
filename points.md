@@ -1,3 +1,3 @@
-* ArchMage = 10
-* Dilbert = 0
-* Jimmy = 0
+* Brandon Brooks = 10
+* Robert Long = 0
+* Jimmy Miller = 0
