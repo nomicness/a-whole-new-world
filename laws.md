@@ -42,8 +42,6 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 In mail and computer games, instead of throwing a die, players subtract 291 from the ordinal number of their proposal and multiply the result by the fraction of favorable votes it received, rounded to the nearest integer. (This yields a number between 0 and 10 for the first player, with the upper limit increasing by one each turn; more points are awarded for more popular proposals.)
 
-**203.** A rule-change is adopted if and only if the vote is unanimous among the eligible voters. If this rule is not amended by the end of the second complete circuit of turns, it automatically changes to require only a simple majority.
-
 **204.** If and when rule-changes can be adopted without unanimity, the players who vote against winning proposals shall receive 10 points each.
 
 **205.** An adopted rule-change takes full effect at the moment of the completion of the vote that adopted it.
@@ -87,3 +85,9 @@ This rule takes precedence over every other rule determining the winner.
 
 **302** The state of affairs that constitutes winning may not be altered from achieving n points to any other state of affairs. The magnitude of n and the means of earning points may be changed, and rules that establish a winner when play cannot continue may be enacted and (while they are mutable) be amended or repealed.
 
+**303.** A vote is either a "yay" (a vote for the proposal) or a "nay" (a vote against the proposal).
+At the end of a proposal's 24 hour period, if the number of yay's is greater than the nay's the proposal is considered adopted. 
+The proposal itself shall count as a yay on behalf of the player who created the proposal. 
+If the number of nay's is greater than or equal to the yay's, the proposal is considered rejected. 
+Any changes to a proposal after submission shall invalidate any votes cast prior to the changes, and those players may cast their vote again. 
+If all active players have cast their votes, and no changes are made to the proposal, the proposal may be considered resolved and the 24 hour period expired.
