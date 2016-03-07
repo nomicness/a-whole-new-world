@@ -2,7 +2,7 @@
 
 **101.** All players must always abide by all the rules then in effect, in the form in which they are then in effect. The rules in the Initial Set are in effect whenever a game begins.
 
-**102.** No rule may make it possible for a player to win the game or end the the game.
+**102.** No rule may make it possible for a player to win the game or end the game.
 
 **103.** A rule-change is any of the following: (1) the enactment, repeal, or amendment of a rule; (2) the enactment, repeal, or amendment of an amendment of a rule.
 
@@ -18,7 +18,7 @@
 
 If a rule is repealed and reenacted, it receives the number of the proposal to reenact it. If a rule is amended it receives the number of the proposal to amend  it. If an amendment is amended or repealed, the entire rule of which it is a part receives the number of the proposal to amend or repeal the amendment.
 
-**109.** A proposal must be voted on by at least 50% of active players (a quorum) in order be resolved (accepted or rejected) unless otherwise noted in the rules. Any time after a rule-change has reached a quorum it may be resolved by its creator. A rule-change is a proposal.
+**109.** A proposal must be voted on by at least 50% of active players (a quorum) in order to be resolved (accepted or rejected) unless otherwise noted in the rules. Any time after a rule-change has reached a quorum it may be resolved by its creator. A rule-change is a proposal.
 
 **110.** In order for a player to be active they must be on the active players list. Any player can make a proposal for another player(s) to be declared inactive. A player will be declared inactive if the following criteria have been met: (1) A majority of active players, minus the players who are being declared inactive, must accept the proposal, (2) a 24 hour business day must have passed from the time the proposal was created, (3) none of the players who are being declared inactive have performed any action since the proposal was created. The creator of the proposal may cancel their proposal at any time.
 
