@@ -68,3 +68,5 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 
 **304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant. 
 It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
+
+**305.** No player may be a judge in a dispute in which they are involved.
