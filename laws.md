@@ -68,3 +68,6 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 
 **304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant. 
 It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
+
+**306.** PLAYER IDS: Active Players represented in the Active Player list must have their GitHub unique identifier (ID) referenced.
+It is important, for parsing, that Active Players are able to be directly tied to votes and comments.
