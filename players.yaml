@@ -1,8 +1,11 @@
 activePlayers:
   - name:  ArchmageInc
     points: 23
+    id: 1346986
   - name: jimmyhmiller
     points: 0
+    id: 6071338
   - name: dilbert88 
     points: 0
+    id: 8261562
 inactivePlayers: []
