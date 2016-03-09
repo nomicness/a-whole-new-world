@@ -38,8 +38,6 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 In mail and computer games, instead of throwing a die, players subtract 291 from the ordinal number of their proposal and multiply the result by the fraction of favorable votes it received, rounded to the nearest integer. (This yields a number between 0 and 10 for the first player, with the upper limit increasing by one each turn; more points are awarded for more popular proposals.)
 
-**204.** If and when rule-changes can be adopted without unanimity, the players who vote against winning proposals shall receive 10 points each.
-
 **205.** An adopted rule-change takes full effect at the moment of the completion of the vote that adopted it.
 
 **206.** When a proposed rule-change is defeated, the player who proposed it loses 10 points.
