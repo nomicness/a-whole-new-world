@@ -70,3 +70,5 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
 
 **305.** No player may be a judge in a dispute in which they are involved.
+
+**308.** If any players disagree about the legality of a move or the interpretation or application of a rule, any player may call for a Judgement. A Judgement is created by opening an issue. The issue must contain a summary of the dispute at hand.
