@@ -70,3 +70,5 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
 
 **305.** No player may be a judge in a dispute in which they are involved.
+
+**306.** PARSING PROPOSALS: A rule-change proposal must be submitted as a PR to the repository with a title which begins with only the numerical ordinal of the proposed rule. No other chararcters may preceed this number, and the number may not be written in word form.
