@@ -75,6 +75,8 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **307.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
 
+**308.** If any players disagree about the legality of a move or the interpretation or application of a rule, any player may call for a Judgement. A Judgement is created by opening an issue. The issue must contain a summary of the dispute at hand.
+
 **309.** OF WAR AND SPOILS: Any Active Player with a positive point vaule may declare War on any other Active Player with a positive point value at any time.
 Once War has been declared, there is a Call To Arms for a period of one (1) Business Day. 
 During the Call To Arms, the player declaring war (Attacker) may request Allies to assist in the attack.
