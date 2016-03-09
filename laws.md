@@ -71,4 +71,6 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **305.** No player may be a judge in a dispute in which they are involved.
 
+**306.** PARSING PROPOSALS: A rule-change proposal must be submitted as a PR to the repository with a title which begins with only the numerical ordinal of the proposed rule. No other characters may preceed this number, and the number may not be written in word form.
+
 **307.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
