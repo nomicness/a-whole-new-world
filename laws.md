@@ -77,7 +77,7 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **308.** If any players disagree about the legality of a move or the interpretation or application of a rule, any player may call for a Judgement. A Judgement is created by opening an issue. The issue must contain a summary of the dispute at hand.
 
-**309.** OF WAR AND SPOILS: Any Active Player with a positive point vaule may declare War on any other Active Player with a positive point value at any time.
+**309.** OF WAR AND SPOILS: Any Active Player with a positive point value may declare War on any other Active Player with a positive point value at any time.
 Once War has been declared, there is a Call To Arms for a period of one (1) Business Day. 
 During the Call To Arms, the player declaring war (Attacker) may request Allies to assist in the attack.
 Also during the Call To Arms, Active Players may become an Ally of the player on which war was declared (Defender).
@@ -86,12 +86,12 @@ A player may not be an Ally of both the attacker and defender.
 
 Once the Call To Arms has expired, Battle begins:
 
-The Attacker and all Allies of the Attacker roll a number of six (6) sided dice equal to their total number of points devided by ten (10) rounded to the nearest whole number.
-Count the total number of dice which rolled higher than four (4).
+The Attacker and all Allies of the Attacker roll a number of six (6) sided dice equal to their total number of points divided by ten (10) rounded to the nearest whole number.
+Count the total number of dice, which rolled higher than four (4).
 This is considered the Attack Strength.
 
-The Defender and all Allies of the Defender roll a number of six (6) sided dice equal to their total number of points devided by ten (10) rounded to the nearset whole number.
-Count the total number of dice which rolled higher than four (4).
+The Defender and all Allies of the Defender roll a number of six (6) sided dice equal to their total number of points divided by ten (10) rounded to the nearest whole number.
+Count the total number of dice, which rolled higher than four (4).
 This is considered the Defense Strength.
 
 The side whose Strength is lower is considered the loser of the Battle.
@@ -101,16 +101,17 @@ This is the Battle Impact.
 
 Multiply the Battle Impact by ten (10) and divide by the number of Players on the losing side of the Battle, rounded to the nearest whole number.
 This is the Battle Cost.
-Subtract a number of points equal to the Battle Cost from each Player on the losing side of the Battle from their point value permenently.
+Subtract a number of points equal to the Battle Cost from each Player on the losing side of the Battle from their point value permanently.
 
 If any Player's point value is reduced to zero (0) or below, they are removed from War.
 
 If either the Attacker or Defender is removed from War, the War has ended and the Victor is the remaining Attacker or Defender.
 
-Battles continue until either the Attacker or Defender's point vaule is reduced to zero (0) or below, or either the Attacker or Defender Surrender.
+Battles continue until either the Attacker or Defender's point value is reduced to zero (0) or below, or either the Attacker or Defender Surrender.
 
 When a Player Surrenders, the opposing Player is considered the Victor.
 The Loser then gives the Victor half of their remaining point balance rounded to the nearest whole number.
 This is considered the Spoils Of War.
 
 The Victor may distribute any of the Spoils to their Allies in any manner.
+
