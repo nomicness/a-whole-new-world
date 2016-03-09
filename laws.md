@@ -73,6 +73,8 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **306.** PARSING PROPOSALS: A rule-change proposal must be submitted as a PR to the repository with a title which begins with only the numerical ordinal of the proposed rule. No other characters may preceed this number, and the number may not be written in word form.
 
+**307.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
+
 **309.** OF WAR AND SPOILS: Any Active Player with a positive point vaule may declare War on any other Active Player with a positive point value at any time.
 Once War has been declared, there is a Call To Arms for a period of one (1) Business Day. 
 During the Call To Arms, the player declaring war (Attacker) may request Allies to assist in the attack.
