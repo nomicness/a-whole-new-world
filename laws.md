@@ -72,3 +72,41 @@ It is important, for parsing, that no other non-space characters be included in 
 **305.** No player may be a judge in a dispute in which they are involved.
 
 **306.** PARSING PROPOSALS: A rule-change proposal must be submitted as a PR to the repository with a title which begins with only the numerical ordinal of the proposed rule. No other characters may preceed this number, and the number may not be written in word form.
+
+**309.** OF WAR AND SPOILS: Any Active Player with a positive point vaule may declare War on any other Active Player with a positive point value at any time.
+Once War has been declared, there is a Call To Arms for a period of one (1) Business Day. 
+During the Call To Arms, the player declaring war (Attacker) may request Allies to assist in the attack.
+Also during the Call To Arms, Active Players may become an Ally of the player on which war was declared (Defender).
+Active Players who wish to become an Ally to the Attacker or Defender, must publicly announce their alliance.
+A player may not be an Ally of both the attacker and defender.
+
+Once the Call To Arms has expired, Battle begins:
+
+The Attacker and all Allies of the Attacker roll a number of six (6) sided dice equal to their total number of points devided by ten (10) rounded to the nearest whole number.
+Count the total number of dice which rolled higher than four (4).
+This is considered the Attack Strength.
+
+The Defender and all Allies of the Defender roll a number of six (6) sided dice equal to their total number of points devided by ten (10) rounded to the nearset whole number.
+Count the total number of dice which rolled higher than four (4).
+This is considered the Defense Strength.
+
+The side whose Strength is lower is considered the loser of the Battle.
+
+Take the larger Strength and subtract the smaller Strength.
+This is the Battle Impact.
+
+Multiply the Battle Impact by ten (10) and divide by the number of Players on the losing side of the Battle, rounded to the nearest whole number.
+This is the Battle Cost.
+Subtract a number of points equal to the Battle Cost from each Player on the losing side of the Battle from their point value permenently.
+
+If any Player's point value is reduced to zero (0) or below, they are removed from War.
+
+If either the Attacker or Defender is removed from War, the War has ended and the Victor is the remaining Attacker or Defender.
+
+Battles continue until either the Attacker or Defender's point vaule is reduced to zero (0) or below, or either the Attacker or Defender Surrender.
+
+When a Player Surrenders, the opposing Player is considered the Victor.
+The Loser then gives the Victor half of their remaining point balance rounded to the nearest whole number.
+This is considered the Spoils Of War.
+
+The Victor may distribute any of the Spoils to their Allies in any manner.
