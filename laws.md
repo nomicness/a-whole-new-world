@@ -71,4 +71,4 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **305.** No player may be a judge in a dispute in which they are involved.
 
-**306.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
+**307.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
