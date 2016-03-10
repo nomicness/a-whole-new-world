@@ -74,3 +74,5 @@ It is important, for parsing, that no other non-space characters be included in 
 **307.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
 
 **308.** If any players disagree about the legality of a move or the interpretation or application of a rule, any player may call for a Judgement. A Judgement is created by opening an issue. The issue must contain a summary of the dispute at hand.
+
+**310.** Players may exchange points. After points have been exchanged between the given players the total amount of points post exchange must equal the total amount of points pre exchange.
