@@ -34,10 +34,6 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 **116.** Whatever is not prohibited or regulated by a rule is permitted and unregulated, with the sole exception of changing the rules, which is permitted only when a rule or set of rules explicitly or implicitly permits it.
 
-**202.** One turn consists of two parts in this order: (1) proposing one rule-change and having it voted on, and (2) throwing one die once and adding the number of points on its face to one's score.
-
-In mail and computer games, instead of throwing a die, players subtract 291 from the ordinal number of their proposal and multiply the result by the fraction of favorable votes it received, rounded to the nearest integer. (This yields a number between 0 and 10 for the first player, with the upper limit increasing by one each turn; more points are awarded for more popular proposals.)
-
 **205.** An adopted rule-change takes full effect at the moment of the completion of the vote that adopted it.
 
 **206.** When a proposed rule-change is defeated, the player who proposed it loses 10 points.
@@ -113,3 +109,4 @@ This is considered the Spoils Of War.
 
 The Victor may distribute any of the Spoils to their Allies in any manner.
 
+**312.** PROPOSAL VALUE: If a Player's rule-change proposal is accepted, the player shall receive a number of points equal to three hundred (300) subtracted from the ordinal number of the proposal.
