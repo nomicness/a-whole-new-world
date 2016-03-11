@@ -1,0 +1,33 @@
+{
+  "name": "nomic-bot",
+  "version": "0.0.1",
+  "description": "An automation utility designed to interact with a nomic game on GitHub",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomic-bot/nomic-bot.git"
+  },
+  "keywords": [
+    "nomic",
+    "bot",
+    "github",
+    "automation"
+  ],
+  "author": "Elminster2031@ArchmageInc.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomic-bot/nomic-bot/issues"
+  },
+  "homepage": "https://github.com/nomic-bot/nomic-bot#readme",
+  "dependencies": {
+    "atob": "^2.0.0",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "firebase": "^2.4.1",
+    "lodash": "^4.6.1",
+    "q": "^1.4.1"
+  }
+}
