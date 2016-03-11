@@ -18,8 +18,6 @@
 
 If a rule is repealed and reenacted, it receives the number of the proposal to reenact it. If a rule is amended it receives the number of the proposal to amend  it. If an amendment is amended or repealed, the entire rule of which it is a part receives the number of the proposal to amend or repeal the amendment.
 
-**109.** A proposal must be voted on by at least 50% of active players (a quorum) in order to be resolved (accepted or rejected) unless otherwise noted in the rules. Any time after a rule-change has reached a quorum it may be resolved by its creator. A rule-change is a proposal.
-
 **110.** In order for a player to be active they must be on the active players list. Any player can make a proposal for another player(s) to be declared inactive. A player will be declared inactive if the following criteria have been met: (1) A majority of active players, minus the players who are being declared inactive, must accept the proposal, (2) a 24 hour business day must have passed from the time the proposal was created, (3) none of the players who are being declared inactive have performed any action since the proposal was created. The creator of the proposal may cancel their proposal at any time.
 
 **111.** If a rule-change as proposed is unclear, ambiguous, paradoxical, or destructive of play, or if it arguably consists of two or more rule-changes compounded or is an amendment that makes no difference, or if it is otherwise of questionable value, then the other players may suggest amendments or argue against the proposal before the vote. A reasonable time must be allowed for this debate. The proponent decides the final form in which the proposal is to be voted on and, unless the Judge has been asked to do so, also decides the time to end debate and vote.
@@ -114,5 +112,7 @@ This is considered the Spoils Of War.
 The Victor may distribute any of the Spoils to their Allies in any manner.
 
 **310.** Players may exchange points. After points have been exchanged between the given players the total amount of points post exchange must equal the total amount of points pre exchange.
+
+**311.** A proposal must be voted on by more than 50% of active players (a quorum) in order to be resolved (accepted or rejected) unless otherwise noted in the rules. Any time after a proposal has reached a quorum it may be resolved by its creator. A rule-change is a proposal.
 
 **313.** rythompson may take up to 15% of ArchmageInc total points (where the total is the number of points ArchmageInc has at the time rythompson takes them) per week at his (rythompson's) discretion.
