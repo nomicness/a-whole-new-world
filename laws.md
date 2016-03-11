@@ -115,4 +115,3 @@ The Victor may distribute any of the Spoils to their Allies in any manner.
 
 **311.** A proposal must be voted on by more than 50% of active players (a quorum) in order to be resolved (accepted or rejected) unless otherwise noted in the rules. Any time after a proposal has reached a quorum it may be resolved by its creator. A rule-change is a proposal.
 
-**313.** rythompson may take up to 15% of ArchmageInc total points (where the total is the number of points ArchmageInc has at the time rythompson takes them) per week at his (rythompson's) discretion.
