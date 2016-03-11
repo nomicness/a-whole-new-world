@@ -16,15 +16,19 @@
             deferred.notify(body.length / size);
         });
         response.on('end', function () {
-            try {
-                deferred.resolve(JSON.parse(body));
-            } catch (exception) {
-                deferred.reject(exception);
+            if (body) {
+                try {
+                    deferred.resolve(JSON.parse(body));
+                } catch (exception) {
+                    deferred.reject(exception);
+                }
+            } else {
+                deferred.resolve(null);
             }
         });
     }
 
-    var gethub = {
+    var github = {
         get: function (options) {
             var deferred = Q.defer(),
                 request = https.get({
@@ -40,7 +44,7 @@
             return deferred.promise;
         },
         getFileContents: function (options) {
-            return gethub.get(options)
+            return github.get(options)
                 .then(function (fileData) {
                     if (fileData && fileData.content) {
                         return atob(fileData.content);
@@ -62,8 +66,81 @@
             request.end();
 
             return deferred.promise;
+        },
+        delete: function (options) {
+            var deferred = Q.defer(),
+                request = https.request({
+                    method: 'DELETE',
+                    host: githubConfig.repository.host,
+                    headers: githubConfig.repository.headers,
+                    auth: githubConfig.repository.auth,
+                    path: options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint
+                }, _.partial(processResponse, deferred));
+
+            request.on('error', deferred.reject);
+            request.write(JSON.stringify(options.data || {}));
+            request.end();
+
+            return deferred.promise;
+        },
+        put: function (options) {
+            var deferred = Q.defer(),
+                request = https.request({
+                    method: 'PUT',
+                    host: githubConfig.repository.host,
+                    headers: githubConfig.repository.headers,
+                    auth: githubConfig.repository.auth,
+                    path: options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint
+                }, _.partial(processResponse, deferred));
+
+            request.on('error', deferred.reject);
+            request.write(JSON.stringify(options.data));
+            request.end();
+
+            return deferred.promise;
+        },
+        sendCommentMessage: function (url, message) {
+            return github.post({
+                path: url,
+                data: {
+                    body: message
+                }
+            }).catch(function (error) {
+                console.error(error);
+            });
+            return {message: message, url: url};
+        },
+        setIssueLabels: function (url, labels) {
+            url = url.replace(/{.*}/g, '');
+            return github.put({
+                path: url,
+                data: labels
+            }).catch(function (error) {
+                console.error(error);
+            });
+            return {message: 'setting labels', url: url, lables: labels};
+        },
+        addIssueLabels: function (url, labels) {
+            labels = _.isArray(labels) ? labels : [labels];
+            url = url.replace(/{.*}/g, '');
+            return github.post({
+                path: url,
+                data: labels
+            }).catch(function (error) {
+                console.error(error);
+            });
+            return {message: 'adding labels', url: url, lables: labels};
+        },
+        removeIssueLabel: function (url, label) {
+            url = url.replace(/{.*}/g, '');
+            return github.delete({
+                path: url + '/' + label
+            }).catch(function (error) {
+                console.error(error);
+            });
+            return {message: 'removing label: ' + label, url: url};
         }
     };
 
-    module.exports = gethub;
+    module.exports = github;
 }());

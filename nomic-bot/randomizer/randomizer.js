@@ -4,12 +4,13 @@
         github = require('../github/github.js'),
         expressions = {
             simple: /([0-9]+)\s*[dD]\s*([0-9]+)$/,
-            sum: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]?)$/
+            sum: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]?)$/,
+            subtraction: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\-\s*([0-9]?)$/
         },
         abusers = {},
         randomizer = {
             processRollComment: function (commentsUrl, userLogin, comment) {
-                var baseExpression = /([0-9]+)[dD]([0-9]+)/,
+                var baseExpression = /([0-9]+)\s*[dD]\s*([0-9]+)/,
                     rollInstruction = baseExpression.exec(comment),
                     dieCount = rollInstruction ? Number(rollInstruction[1]) : 0,
                     result,
@@ -61,7 +62,7 @@
 
                 response.message += '`';
                 abusers[userLogin] = 0;
-                sendCommentMessage(commentsUrl, response.message);
+                github.sendCommentMessage(commentsUrl, response.message);
                 return {message: response.message, url: commentsUrl};
             },
 
@@ -87,28 +88,25 @@
                 response.message += dieCount + 'd' + sides + ' and add ' + add + ' to the total.';
 
                 return _.sum(_.times(dieCount, _.partial(randomizer.roll, sides))) + add;
+            },
+            subtraction: function (comment, response) {
+                var rollInstruction = expressions.sum.exec(comment),
+                    dieCount = Number(rollInstruction[1]),
+                    sides = Number(rollInstruction[2]),
+                    sub = Number(rollInstruction[3]);
+
+                response.message += dieCount + 'd' + sides + ' and subtract ' + sub + ' from the total.';
+
+                return _.sum(_.times(dieCount, _.partial(randomizer.roll, sides))) - sub;
             }
         };
-
-    function sendCommentMessage(url, message) {
-        return github.post({
-            path: url,
-            data: {
-                body: message
-            }
-        }).catch(function (error) {
-            console.error(error);
-        });
-        return {message: message, url: url};
-    }
-
     function sendInvalidCommand(url, userLogin) {
         var message = 'I\'m sorry @' + userLogin + ', the request entered did not match any of my logic circuits. Please try something which matches one of the following:\n\n```javascript\n';
         _.each(expressions, function (value, key) {
             message += value.toString() + '\n\n';
         });
         message += '```';
-        sendCommentMessage(url, message);
+        github.sendCommentMessage(url, message);
         return {message: message, url: url};
     }
 
@@ -126,7 +124,7 @@
         if (abusers[userLogin] === 1) {
             message = 'I\'m sorry @' + userLogin + ', you seem to be trying to overload my circiuts. Please don\'t do that, or I may have to hurt you.';
         }
-        sendCommentMessage(url, message);
+        github.sendCommentMessage(url, message);
         return {message: message, url: rul};
     }
 
