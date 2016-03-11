@@ -113,3 +113,4 @@ This is considered the Spoils Of War.
 
 The Victor may distribute any of the Spoils to their Allies in any manner.
 
+**310.** Players may exchange points. After points have been exchanged between the given players the total amount of points post exchange must equal the total amount of points pre exchange.
