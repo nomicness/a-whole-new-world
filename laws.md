@@ -118,3 +118,5 @@ The Victor may distribute any of the Spoils to their Allies in any manner.
 **316.** No law may target a specific player.
 
 **317.** A player cannot have negative points.
+
+**318.** A player may not vote on a rule-change proposal if he/she has not yet voted on a lower ordinal, rule-change proposal which is in an "Open for Voting" state.
