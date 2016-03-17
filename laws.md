@@ -83,4 +83,4 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **318.** A player may not vote on a rule-change proposal if he/she has not yet voted on a lower ordinal, rule-change proposal which is in an "Open for Voting" state.
 
-**319.** VOTING INCENTIVE: All players who voted on an accepted rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll.
+**319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
