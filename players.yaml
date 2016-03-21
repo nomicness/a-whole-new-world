@@ -2,13 +2,8 @@ activePlayers:
   - name:  ArchmageInc
     points: 190
   - name: jimmyhmiller
-<<<<<<< HEAD
-    points: 74
-  - name: dilbert88
-=======
     points: 81
-  - name: dilbert88 
->>>>>>> ae9839630dc44360ec50971c938b46cff4943a28
+  - name: dilbert88
     points: 67
   - name: rythompson
     points: 18
