@@ -87,4 +87,4 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **320.** No point values may be manipulated outside of the rules.
 
-**321.** A player may only become active upon submitting a rule in any form or a majority vote of the then active players. Given a tie vote the player is to be immediately add as active in the spirit of furthering the game.
+**322.** A player may only become active upon submitting a rule in any form or a majority vote of the then active players. Given a tie vote the player is to be immediately add as active in the spirit of furthering the game.
