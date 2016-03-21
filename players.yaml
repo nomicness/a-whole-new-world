@@ -1,10 +1,10 @@
 activePlayers:
   - name:  ArchmageInc
     points: 151
+inactivePlayers:
   - name: jimmyhmiller
     points: 74
   - name: dilbert88 
     points: 67
   - name: rythompson
     points: 18
-inactivePlayers: []
