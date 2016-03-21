@@ -38,8 +38,6 @@ In mail and computer games, instead of throwing a die, players subtract 291 from
 
 **205.** An adopted rule-change takes full effect at the moment of the completion of the vote that adopted it.
 
-**206.** When a proposed rule-change is defeated, the player who proposed it loses 10 points.
-
 **207.** Each player always has exactly one vote.
 
 **210.** Players may not conspire or consult on the making of future rule-changes unless they are team-mates.
@@ -84,3 +82,5 @@ It is important, for parsing, that no other non-space characters be included in 
 **318.** A player may not vote on a rule-change proposal if he/she has not yet voted on a lower ordinal, rule-change proposal which is in an "Open for Voting" state.
 
 **319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
+
+**320.** No point values may be manipulated outside of the rules. 
