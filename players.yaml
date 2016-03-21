@@ -3,8 +3,10 @@ activePlayers:
     points: 151
   - name: jimmyhmiller
     points: 74
-  - name: dilbert88 
+  - name: dilbert88
     points: 67
   - name: rythompson
     points: 18
+  - name: thematrimix
+    points: 0
 inactivePlayers: []

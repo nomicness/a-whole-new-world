@@ -62,7 +62,7 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 
 **213.** If the rules are changed so that further play is impossible, or if the legality of a move cannot be determined with finality, or if by the Judge's best reasoning, not overruled, a move appears equally legal and illegal, then a constitutional convention should be held.
 
-**304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant. 
+**304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant.
 It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
 
 **305.** No player may be a judge in a dispute in which they are involved.
@@ -84,3 +84,5 @@ It is important, for parsing, that no other non-space characters be included in 
 **318.** A player may not vote on a rule-change proposal if he/she has not yet voted on a lower ordinal, rule-change proposal which is in an "Open for Voting" state.
 
 **319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
+
+**320.** A player may only become active upon submitting a rule in any form or a majority vote of the then active players. Given a tie vote the player is to be immediately add as active in the spirit of furthering the game.
