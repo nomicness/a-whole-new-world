@@ -38,8 +38,6 @@ In mail and computer games, instead of throwing a die, players subtract 291 from
 
 **205.** An adopted rule-change takes full effect at the moment of the completion of the vote that adopted it.
 
-**206.** When a proposed rule-change is defeated, the player who proposed it loses 10 points.
-
 **207.** Each player always has exactly one vote.
 
 **210.** Players may not conspire or consult on the making of future rule-changes unless they are team-mates.
