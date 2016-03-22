@@ -22,8 +22,6 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 **111.** If a rule-change as proposed is unclear, ambiguous, paradoxical, or destructive of play, or if it arguably consists of two or more rule-changes compounded or is an amendment that makes no difference, or if it is otherwise of questionable value, then the other players may suggest amendments or argue against the proposal before the vote. A reasonable time must be allowed for this debate. The proponent decides the final form in which the proposal is to be voted on and, unless the Judge has been asked to do so, also decides the time to end debate and vote.
 
-**112.** A player may add themselves to the active players list to become active. No individual may control more than one active player.
-
 **113.** A player always has the option to forfeit the game rather than continue to play or incur a game penalty. No penalty worse than losing, in the judgment of the player to incur it, may be imposed.
 
 **114.** The adoption of rule-changes must never become completely impermissible.
@@ -60,7 +58,7 @@ New Judges are not bound by the decisions of old Judges. New Judges may, however
 
 **213.** If the rules are changed so that further play is impossible, or if the legality of a move cannot be determined with finality, or if by the Judge's best reasoning, not overruled, a move appears equally legal and illegal, then a constitutional convention should be held.
 
-**304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant. 
+**304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant.
 It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
 
 **305.** No player may be a judge in a dispute in which they are involved.
@@ -83,4 +81,7 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
 
-**320.** No point values may be manipulated outside of the rules. 
+**320.** No point values may be manipulated outside of the rules.
+
+**326.** A player seeking to join the game must submit a proposal to be added to the active players list. The then submitted proposal may be accepted or rejected based on following criteria: if the submitting player also submits a rule in any form the proposal is accepted or a majority vote of the then active players, on the proposal to be added, reaching a quorum. Upon reaching a quorum and given no majority vote the proposal is accepted.
+Also, let stand, that no individual may control more than one active player.
