@@ -83,5 +83,5 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **320.** No point values may be manipulated outside of the rules.
 
-**326.** A player seeking to join the game must submit a proposal to be added to the active players list. The then submitted proposal may be accepted or rejected based on following criteria: if the submitting play also submits a rule in any form the proposal is accepted or a majority vote of the then active players reaching a quorum. Upon reaching a quorum and given no majority vote the proposal is accepted.
+**326.** A player seeking to join the game must submit a proposal to be added to the active players list. The then submitted proposal may be accepted or rejected based on following criteria: if the submitting player also submits a rule in any form the proposal is accepted or a majority vote of the then active players reaching a quorum. Upon reaching a quorum and given no majority vote the proposal is accepted.
 Also, let stand, that no individual may control more than one active player.
