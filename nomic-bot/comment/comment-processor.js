@@ -2,9 +2,11 @@
     'use strict';
     var randomizer = require('../randomizer/randomizer.js'),
         voteProcessor = require('../vote/vote-processor.js'),
+        openProcessor = require('../open/open-processor.js'),
         expressions = {
             roll: /^\/roll/,
-            vote: /^yay|nay$/i
+            vote: /^yay|nay$/i,
+            open: /^\/open/
         };
 
 
@@ -31,6 +33,11 @@
                 if (expressions.vote.test(commentBody)) {
                     console.log(userLogin + ' - ' + commentBody);
                     return responder.status(200).json(voteProcessor.processVote(commentsUrl, userLogin, request.body));
+                }
+
+                if (expressions.open.test(commentBody)) {
+                    console.log(userLogin + ' - ' + commentBody);
+                    return responder.status(200).json(openProcessor.processOpen(commentsUrl, userLogin, request.body));
                 }
 
             }
