@@ -5,8 +5,8 @@
         github = require('../github/github.js'),
         expressions = {
             vote: /^yay|nay$/i,
-            positive: /^yay$/i,
-            negative: /^nay$/i
+            positive: /^\s*yay\s*$/i,
+            negative: /^\s*nay\s*$/i
         },
         labelTitles = {
             passing: 'Passing',
@@ -71,6 +71,7 @@
                         });
 
                         _.each(votes, function (vote) {
+                            console.log(' ' + vote.login + ': ' + vote.value);
                             voteValue += vote.value;
                         });
 
@@ -87,9 +88,9 @@
                         } else {
                             labels.push(labelTitles.tied);
                         }
-                        console.log(labels)
+                        console.log(labels);
 
-                        console.log(' ' + _.size(votes) + ' / ' + quorum + '(' + activePlayers.length + '): [' + voteValue + ']');
+                        console.log(' ' + _.size(votes) + ' / ' + quorum + ' (total: ' + activePlayers.length + '): [' + voteValue + ']');
 
                         github.setIssueLabels(labelsUrl, labels);
 

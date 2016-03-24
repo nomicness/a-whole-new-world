@@ -35,7 +35,7 @@
                     host: githubConfig.repository.host,
                     headers: githubConfig.repository.headers,
                     auth: githubConfig.repository.auth,
-                    path: options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint
+                    path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?per_page=100'
                 }, _.partial(processResponse, deferred))
                 .on('error', deferred.reject);
 
