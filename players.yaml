@@ -1,6 +1,12 @@
 activePlayers:
   - name:  ArchmageInc
     points: 344
+    village:
+      - name: Cormyr
+        overseer: ArchmageInc
+        population: 95
+        farms: 0
+        hunger: 0
   - name: jimmyhmiller
     points: 81
   - name: dilbert88
