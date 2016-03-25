@@ -89,3 +89,12 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **325.** In order for a rule-change proposal to be adopted once a quorum is reached, more than 50% of the votes must be positive (yay). In the event of a tie, the proposal may either be removed by the creator, or it may remain open until the tie is broken.
 
+**327.** **VILLAGES:** This rule governs initial village definitions.
+
+  - **SECTION 1** Each Active Player oversees a Village. All Villages must abide by any rules defined herein. Villages may enact their own ruleset under the proviso no Village Rule conflicts with rules defined herein. 
+  
+  - **SECTION 2** If a player's Village Population drops to zero (0), the player looses all points, property, and any other resources. 
+  
+  - **SECTION 3** Initial Village Populations are defined by rolling 12d12+12.
+  
+  - **SECTION 4** Village names and descriptions are at the descression of the Overseeer of the village, though resources, population growth, and prosperity must be determined by the rules defined herein. 
