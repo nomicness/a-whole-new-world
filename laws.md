@@ -98,5 +98,3 @@ It is important, for parsing, that no other non-space characters be included in 
   - **SECTION 3** Initial Village Populations are defined by rolling 12d12+12.
   
   - **SECTION 4** Village names and descriptions are at the descression of the Overseeer of the village, though resources, population growth, and prosperity must be determined by the rules defined herein. 
-  
-  - **SECTION 5** This rule escapes rules **108** and **103** In that individual sections of this rule may be ammended INLINE and will not receive a new ordinal. For the purposes of proposals and points, the ordinal 327 shall be used for Section ammendments and additions. 
