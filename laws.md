@@ -98,3 +98,6 @@ It is important, for parsing, that no other non-space characters be included in 
   - **SECTION 3** Initial Village Populations are defined by rolling 12d12+12.
   
   - **SECTION 4** Village names and descriptions are at the descression of the Overseeer of the village, though resources, population growth, and prosperity must be determined by the rules defined herein. 
+
+
+
