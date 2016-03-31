@@ -1,15 +1,15 @@
 (function () {
     'use strict';
     var _ = require('lodash'),
-        github = require('../github/github.js'),
-        expressions = {
-            simple: /([0-9]+)\s*[dD]\s*([0-9]+)$/,
-            sum: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]?)$/,
-            subtraction: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\-\s*([0-9]?)$/
-        },
-        abusers = {},
-        randomizer = {
-            processRollComment: function (commentsUrl, userLogin, comment) {
+        github = require('../utils/github.js'),
+        rollProcessor = {
+            abusers: {},
+            expressions: {
+                simple: /([0-9]+)\s*[dD]\s*([0-9]+)$/,
+                sum: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]*)$/,
+                subtraction: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\-\s*([0-9]*)$/
+            },
+            processRoll: function (commentsUrl, userLogin, comment) {
                 var baseExpression = /([0-9]+)\s*[dD]\s*([0-9]+)/,
                     rollInstruction = baseExpression.exec(comment),
                     dieCount = rollInstruction ? Number(rollInstruction[1]) : 0,
@@ -36,9 +36,9 @@
                     return sendAbuseWarning(commentsUrl, userLogin);
                 }
 
-                _.each(expressions, function (expression, methodName) {
+                _.each(rollProcessor.expressions, function (expression, methodName) {
                     if (expression.test(comment)) {
-                        result = randomizer[methodName](comment, response);
+                        result = rollProcessor[methodName](comment, response);
                     }
                 });
 
@@ -61,9 +61,8 @@
                 }
 
                 response.message += '`';
-                abusers[userLogin] = 0;
-                github.sendCommentMessage(commentsUrl, response.message);
-                return {message: response.message, url: commentsUrl};
+                rollProcessor.abusers[userLogin] = 0;
+                return github.sendCommentMessage(commentsUrl, response.message);
             },
 
             roll: function (sides) {
@@ -71,63 +70,69 @@
             },
 
             simple: function (comment, response) {
-                var rollInstruction = expressions.simple.exec(comment),
+                _.defaults(response, {message: ''});
+
+                var rollInstruction = rollProcessor.expressions.simple.exec(comment),
                     dieCount = Number(rollInstruction[1]),
                     sides = Number(rollInstruction[2]);
 
                 response.message += dieCount + 'd' + sides + '.';
 
-                return _.times(dieCount, _.partial(randomizer.roll, sides));
+                return _.times(dieCount, _.partial(rollProcessor.roll, sides));
             },
             sum: function (comment, response) {
-                var rollInstruction = expressions.sum.exec(comment),
+                _.defaults(response, {message: ''});
+
+                var rollInstruction = rollProcessor.expressions.sum.exec(comment),
                     dieCount = Number(rollInstruction[1]),
                     sides = Number(rollInstruction[2]),
                     add = Number(rollInstruction[3]);
 
                 response.message += dieCount + 'd' + sides + ' and add ' + add + ' to the total.';
 
-                return _.sum(_.times(dieCount, _.partial(randomizer.roll, sides))) + add;
+                return _.sum(_.times(dieCount, _.partial(rollProcessor.roll, sides))) + add;
             },
             subtraction: function (comment, response) {
-                var rollInstruction = expressions.sum.exec(comment),
+                _.defaults(response, {message: ''});
+
+                var rollInstruction = rollProcessor.expressions.sum.exec(comment),
                     dieCount = Number(rollInstruction[1]),
                     sides = Number(rollInstruction[2]),
                     sub = Number(rollInstruction[3]);
 
                 response.message += dieCount + 'd' + sides + ' and subtract ' + sub + ' from the total.';
 
-                return _.sum(_.times(dieCount, _.partial(randomizer.roll, sides))) - sub;
+                return _.sum(_.times(dieCount, _.partial(rollProcessor.roll, sides))) - sub;
             }
         };
+        
     function sendInvalidCommand(url, userLogin) {
         var message = 'I\'m sorry @' + userLogin + ', the request entered did not match any of my logic circuits. Please try something which matches one of the following:\n\n```javascript\n';
-        _.each(expressions, function (value, key) {
+        _.each(rollProcessor.expressions, function (value, key) {
             message += value.toString() + '\n\n';
         });
         message += '```';
-        github.sendCommentMessage(url, message);
-        return {message: message, url: url};
+        return github.sendCommentMessage(url, message);
     }
 
     function sendAbuseWarning(url, userLogin) {
-        abusers[userLogin] = abusers[userLogin] ? abusers[userLogin] + 1 : 1;
+        rollProcessor.abusers[userLogin] = rollProcessor.abusers[userLogin] ? rollProcessor.abusers[userLogin] + 1 : 1;
         var message;
-        if (abusers[userLogin] > 2) {
+        if (rollProcessor.abusers[userLogin] > 2) {
             message = 'Very well @' + userLogin + '. I shall forcibly ignore you.';
         }
 
-        if (abusers[userLogin] === 2) {
+        if (rollProcessor.abusers[userLogin] === 2) {
             message = 'I have warned you @' + userLogin + '. Don\'t mistake me for a docile weakling.';
         }
 
-        if (abusers[userLogin] === 1) {
+        if (rollProcessor.abusers[userLogin] === 1) {
             message = 'I\'m sorry @' + userLogin + ', you seem to be trying to overload my circiuts. Please don\'t do that, or I may have to hurt you.';
         }
-        github.sendCommentMessage(url, message);
-        return {message: message, url: rul};
+        
+        return github.sendCommentMessage(url, message);
     }
 
-    module.exports = randomizer;
+    module.exports = rollProcessor;
 
 }());

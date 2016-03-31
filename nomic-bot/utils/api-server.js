@@ -2,7 +2,8 @@
     'use strict';
     var _ = require('lodash'),
         express = require('express'),
-        bodyParser = require('body-parser');
+        bodyParser = require('body-parser'),
+        logger = require('../utils/logger.js');
 
 
     function ApiServer(options) {
@@ -18,23 +19,23 @@
         this.app.use(bodyParser.json());
 
         this.server = this.app.listen(this.port, this.host, function () {
-            console.log('API Ready and Listening on ' + apiServer.protocol + '://' + apiServer.host + ':' + apiServer.port);
+            logger.info('API Ready and Listening on ' + apiServer.protocol + '://' + apiServer.host + ':' + apiServer.port);
         });
 
     }
 
     ApiServer.prototype = {
-        get: function (endpoint, processor) {
+        answerGet: function (endpoint, processor) {
             var apiServer = this;
 
-            console.log('Adding GET Path: ' + endpoint);
+            logger.info('Adding GET Path: ' + endpoint);
 
             apiServer.app.get(endpoint, processor);
         },
-        post: function (endpoint, processor) {
+        answerPost: function (endpoint, processor) {
             var apiServer = this;
 
-            console.log('Adding POST Path: ' + endpoint);
+            logger.info('Adding POST Path: ' + endpoint);
 
             apiServer.app.post(endpoint, processor);
         }
