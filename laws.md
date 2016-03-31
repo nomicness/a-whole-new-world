@@ -100,3 +100,5 @@ It is important, for parsing, that no other non-space characters be included in 
   - **SECTION 4** Village names and descriptions are at the descression of the Overseeer of the village, though resources, population growth, and prosperity must be determined by the rules defined herein. 
 
 **328.** **FARM PURCHASES:** Active Players with a village may purchase farms for 10 points each.
+
+**329.** **FARM PRODUCTION:** Farms produce enough food to feed 1d12+12 people per week.
