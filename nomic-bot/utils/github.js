@@ -9,6 +9,7 @@
         
         githubAuth = process.env.GITHUB_AUTH,
         testing = process.env.TESTING || false,
+        logReads = process.env.LOG_READS || false,
 
         logger = require('../utils/logger.js'),
         githubConfig = require('../config/github-config.js');
@@ -70,6 +71,25 @@
         deferred.resolve({});
         return deferred.promise;
     }
+    
+    function logRead(options, response) {
+        var page = options.page || 1;
+        
+        logger.log('============READING==============');
+        logger.log('------------META--------------------');
+        logger.log({
+            host: githubConfig.repository.host,
+            headers: githubConfig.repository.headers,
+            auth: githubAuth,
+            path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?page=' + page
+        });
+        logger.log('------------RESPONSE--------------------');
+        logger.log(response);
+        logger.log('------------FILE DATA---------------');
+        logger.log(response.content && atob(response.content));
+        logger.log('============END READ==============');
+        return response;
+    }
 
     var github = {
         userLogin: githubConfig.bot.userLogin,
@@ -85,7 +105,9 @@
                 .on('error', deferred.reject);
 
             request.end();
-
+            if (logReads) {
+                return deferred.promise.then(_.partial(logRead, options));
+            }
             return deferred.promise;
         },
         post: function (options) {
@@ -139,6 +161,25 @@
                     path: options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint
                 }, _.partial(processResponse, deferred, request));
 
+            request.on('error', deferred.reject);
+            request.write(JSON.stringify(options.data));
+            request.end();
+
+            return deferred.promise;
+        },
+        patch: function (options) {
+            if (testing) {
+                return mockWrite(options, 'PATCH');
+            }
+            var deferred = Q.defer(),
+                request = https.request({
+                    method: 'PATCH',
+                    host: githubConfig.repository.host,
+                    headers: githubConfig.repository.headers,
+                    auth: githubAuth,
+                    path: options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint
+                }, _.partial(processResponse, deferred, request));
+                
             request.on('error', deferred.reject);
             request.write(JSON.stringify(options.data));
             request.end();

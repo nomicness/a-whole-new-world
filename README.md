@@ -21,6 +21,9 @@ It will apply the appropriate labels to the PR. As per rule **304**:
 > **304.** PARSING VOTES: A vote must be a Pull Request (PR) comment containing only a "yay" (a vote for a proposal) or a "nay" (a vote against a proposal). Case sensitivity is irrelevant. 
 > It is important, for parsing, that no other non-space characters be included in the comment body. The comment must be attached to the PR itself, and not associated with any specific file.
 
+When a proposal is voted upon, Nomic Bot will respond with the incentive value the voter will be awarded once the proposal has quorum.
+Once a quorum is reached, Nomic Bot will update the player file with the pending incentive values for the players who have already voted.
+
 ### Proposal Management
 
 #### /open
@@ -29,7 +32,22 @@ In order for a vote on a proposal to be proper, the proposal must be in an "Open
 This is managed through the PR's label. 
 Active Players who are not repository administrators are unable to add labels to their PR.
 For this, Nomic bot will listen for a PR comment of **/open**.
-This will allow only allow the creator of the PR, if they are an Active Player, to add the "Open For Voting" label, and thus put the PR in the corresponding state.
+This will allow only the creator of the PR, if they are an Active Player, to add the "Open For Voting" label, and thus put the PR in the corresponding state.
+
+#### /close
+
+Closing a proposal will remove the "Open For Voting" label and close the PR.
+This will allow only the creator of the PR, if they are an Active Player, to close the PR and remove the "Open For Voting" label.
+
+#### /resolve
+
+If a proposal has reached a quorum, it is responsibility of the proposer to resolve the proposal.
+Using the **/resolve** command will check to make sure the proposal has reached quorum and is either in a passing or failing state.
+If the proposal is passing, Nomic Bot will attempt to merge the PR into the master branch, thus being accepted.
+If the proposal is failing, Nomic Bot will close the PR.
+Only the proposal's owner, if they are an Active Player, is able to resolve a proposal.
+The passing of a proposal awards the creator points based on the ordinal of the proposal.
+Nomic Bot will automatically update the player's points.
 
 ### Dice Rolling and Randomness
 

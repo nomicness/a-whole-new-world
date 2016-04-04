@@ -6,12 +6,16 @@
         rollProcessor = require('../command-processors/roll-processor.js'),
         voteProcessor = require('../command-processors/vote-processor.js'),
         openProcessor = require('../command-processors/open-processor.js'),
+        closeProcessor = require('../command-processors/close-processor.js'),
         buyProcessor = require('../command-processors/buy-processor.js'),
+        resolveProcessor = require('../command-processors/resolve-processor.js'),
         commentProcessor = {
             expressions: {
                 roll: /^\/roll/i,
                 vote: /^yay|nay$/i,
                 open: /^\/open/i,
+                resolve: /^\/resolve/i,
+                close: /^\/close/i,
                 buy: /^\/buy/i
             },
             initializeEndpoint: function (apiServer) {
@@ -42,6 +46,18 @@
                     if (commentProcessor.expressions.open.test(commentBody)) {
                         logger.info(userLogin + ' - ' + commentBody);
                         return Q.when(openProcessor.processOpen(commentsUrl, userLogin, request.body))
+                            .then(_.partial(sendResponse, responder));
+                    }
+                    
+                    if (commentProcessor.expressions.resolve.test(commentBody)) {
+                        logger.info(userLogin + ' - ' + commentBody);
+                        return Q.when(resolveProcessor.processResolve(commentsUrl, userLogin, request.body))
+                            .then(_.partial(sendResponse, responder));
+                    }
+                    
+                    if (commentProcessor.expressions.close.test(commentBody)) {
+                        logger.info(userLogin + ' - ' + commentBody);
+                        return Q.when(closeProcessor.processClose(commentsUrl, userLogin, request.body))
                             .then(_.partial(sendResponse, responder));
                     }
 
