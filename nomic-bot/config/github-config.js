@@ -1,6 +1,9 @@
 (function () {
     'use strict';
     module.exports = {
+        bot: {
+            userLogin: 'nomic-bot'
+        },
         repository: {
             host: 'api.github.com',
             owner: 'nomicness',

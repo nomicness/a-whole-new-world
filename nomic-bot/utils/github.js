@@ -29,11 +29,24 @@
                     deferred.reject(responseBody);
                     return;
                 }
+                responseBody._meta = {
+                    headers: response.headers,
+                    lastPage: getLastPageNumber(response.headers.link)
+                };
                 deferred.resolve(responseBody);
             } catch (exception) {
                 deferred.reject(exception);
             }
         });
+    }
+    
+    function getLastPageNumber(linkHeader) {
+        var expression = /page=([0-9]+).*rel="last"/i;
+        if (!linkHeader || !_.isString(linkHeader) || !expression.test(linkHeader)) {
+            return 1;
+        }
+        
+        return expression.exec(linkHeader.substr(linkHeader.lastIndexOf('page')))[1];
     }
     
     function mockWrite(options, method) {
@@ -59,13 +72,15 @@
     }
 
     var github = {
+        userLogin: githubConfig.bot.userLogin,
         get: function (options) {
             var deferred = Q.defer(),
+                page = options.page || 1,
                 request = https.get({
                     host: githubConfig.repository.host,
                     headers: githubConfig.repository.headers,
                     auth: githubAuth,
-                    path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?per_page=100'
+                    path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?page=' + page
                 }, _.partial(processResponse, deferred, request))
                 .on('error', deferred.reject);
 
@@ -148,6 +163,30 @@
             })
             .then(_.constant({message: 'Sending Message: ' + message, url: url}))
             .catch(logger.error);
+        },
+        getAllComments: function (commentsUrl) {
+            var comments = [];
+            return github.get({
+                path: commentsUrl
+            }).then(function (commentPage) {
+                if (commentPage._meta.lastPage && commentPage._meta.lastPage !== 1) {
+                    var promises = _.times(commentPage._meta.lastPage, function (n) {
+                        return github.get({
+                            path: commentsUrl,
+                            page: n + 1
+                        });
+                    });
+                    return Q.all(promises)
+                        .then(function (resultSet) {
+                            _.each(resultSet, function (results) {
+                                comments = comments.concat(results);
+                            });
+                            return comments;
+                        });
+                }
+                
+                return commentPage;
+            });
         },
         setIssueLabels: function (url, labels) {
             url = url.replace(/{.*}/g, '');
