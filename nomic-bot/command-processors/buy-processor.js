@@ -45,7 +45,7 @@
             },
             farm: function (commentsUrl, requestBody, playerData, player) {
                 var purchaseInstruction = buyProcessor.expressions.farm.exec(requestBody.comment.body),
-                    farmCount = purchaseInstruction[1] || 1,
+                    farmCount = Number(purchaseInstruction[1]) || 1,
                     pointCost = farmCount * buyProcessor.costs.farm,
                     production = 0,
                     message = '';
