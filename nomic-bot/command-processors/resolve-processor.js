@@ -27,7 +27,8 @@
                 return !!_.find(issue.lables, {name: voteProcessor.labelTitles.tied});
             },
             processReject: function (issue) {
-                var labels = _.map(_.remove(issue.labels, {name: voteProcessor.labelTitles.open}), 'name');
+                _.remove(issue.labels, {name: voteProcessor.labelTitles.open});
+                var labels = _.map(issue.labels, 'name');
                 logger.log('  - Closing PR #' + issue.number);
                 return github.patch({
                     path: issue.url,
@@ -38,10 +39,18 @@
                 }).catch(logger.error);
             },
             processAccept: function (issue, userLogin) {
+                _.remove(issue.labels, {name: voteProcessor.labelTitles.open});
+                var labels = _.map(issue.labels, 'name');
                 
                 logger.log('  - Removing "' + voteProcessor.labelTitles.open + '" label');
                 
-                return github.removeIssueLabel(issue.labels_url, voteProcessor.labelTitles.open)
+                return github.patch({
+                    path: issue.url,
+                    data: {
+                        state: 'closed',
+                        labels: labels
+                    }
+                })
                 .then(function () {
                     logger.log('  - Getting full PR');
                     return github.get({
@@ -55,18 +64,9 @@
                                 commit_message: 'Resolving Proposal for @' + userLogin,
                                 sha: pullRequest.head.sha
                             }
-                        })
-                        .then(function () {
-                            logger.log('  - Setting closed state for issue');
-                            return github.patch({
-                                path: issue.url,
-                                data: {
-                                    state: 'closed'
-                                }
-                            });
                         });
                     });
-                });
+                }).catch(logger.error);
             },
             processPoints: function (playerData, player, issue) {
                 var ordinal = Number(voteProcessor.expressions.ordinal.exec(issue.title)[1]),

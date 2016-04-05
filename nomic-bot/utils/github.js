@@ -72,10 +72,12 @@
         return deferred.promise;
     }
     
-    function logRead(options, response) {
+    function logRead(options, request, response) {
         var page = options.page || 1;
         
         logger.log('============READING==============');
+        logger.log('--------REQUEST HEADERS-------------');
+        logger.log(request._headers);
         logger.log('------------META--------------------');
         logger.log({
             host: githubConfig.repository.host,
@@ -106,7 +108,7 @@
 
             request.end();
             if (logReads) {
-                return deferred.promise.then(_.partial(logRead, options));
+                return deferred.promise.then(_.partial(logRead, options, request));
             }
             return deferred.promise;
         },
