@@ -102,3 +102,18 @@ It is important, for parsing, that no other non-space characters be included in 
 **328.** **FARM PURCHASES:** Active Players with a village may purchase farms for 10 points each.
 
 **329.** **FARM PRODUCTION:** Farms produce enough food to feed 1d12+12 people per week.
+
+**330.** **FEED THE PEOPLE:** 
+  - **SECTION 1** Active Players with a Village must have enough Farms to feed the Village's Population or become at risk for Starvation.
+
+  - **SECTION 2** Hunger will occur once per week. The Hunger will be equal to the Village's Population at the time of calculation.
+
+  - **SECTION 3** Farm production will be calculated at the time of Hunger and used to reduce the Village's Hunger.
+   
+  - **SECTION 4** If there is a positive Hunger value after Farm production, an issue will be created and assigned to the Active Player.
+   
+  - **SECTION 5** During the next week, the Active Player may purchase additional Farms which will immediatly calculate production, and reduce the Hunger value.
+
+  - **SECTION 6** A negative Hunger value indicates a surplus and will be considered stored, and used to reduce the next Hunger calculation.
+
+  - **SECTION 7** If a Village has a pre-existing positive Hunger value when Hunger strikes, Starvation will occur and the village's population will be reduced by the Hunger value.
