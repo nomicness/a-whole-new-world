@@ -269,7 +269,7 @@
                     data: {
                         message: message,
                         committer: {
-                            name: 'Nomic Bot',
+                            name: github.userLogin,
                             email: 'nomic-bot@archmageinc.com'
                         },
                         content: btoa(yamlString),
