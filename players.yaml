@@ -1,13 +1,13 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 480
+        points: 420
         village:
             name: Cormyr
             overseer: ArchmageInc
             population: 95
-            farms: 0
-            hunger: 0
+            farms: 6
+            hunger: -21
     -
         name: jimmyhmiller
         points: 90
@@ -15,6 +15,7 @@ activePlayers:
             name: Friesland
             population: 105
             farms: 0
+            hunger: 105
     -
         name: dilbert88
         points: 87
