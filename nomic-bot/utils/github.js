@@ -2,6 +2,7 @@
     'use strict';
     var _ = require('lodash'),
         https = require('https'),
+        queryString = require('querystring'),
         atob = require('atob'),
         YAML = require('yamljs'),
         btoa = require('btoa'),
@@ -73,8 +74,6 @@
     }
     
     function logRead(options, request, response) {
-        var page = options.page || 1;
-        
         logger.log('============READING==============');
         logger.log('--------REQUEST HEADERS-------------');
         logger.log(request._headers);
@@ -83,7 +82,7 @@
             host: githubConfig.repository.host,
             headers: githubConfig.repository.headers,
             auth: githubAuth,
-            path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?page=' + page
+            path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?' + queryString.stringify(options.query)
         });
         logger.log('------------RESPONSE--------------------');
         logger.log(response);
@@ -97,12 +96,12 @@
         userLogin: githubConfig.bot.userLogin,
         get: function (options) {
             var deferred = Q.defer(),
-                page = options.page || 1,
+                query = options.query || {},
                 request = https.get({
                     host: githubConfig.repository.host,
                     headers: githubConfig.repository.headers,
                     auth: githubAuth,
-                    path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?page=' + page
+                    path: (options.path || '/repos/' + githubConfig.repository.owner + '/' + githubConfig.repository.repo + '/' + options.endpoint) + '?' + queryString.stringify(query)
                 }, _.partial(processResponse, deferred, request))
                 .on('error', deferred.reject);
 
@@ -216,7 +215,9 @@
                     var promises = _.times(commentPage._meta.lastPage, function (n) {
                         return github.get({
                             path: commentsUrl,
-                            page: n + 1
+                            query: {
+                                page: n + 1
+                            }
                         });
                     });
                     return Q.all(promises)

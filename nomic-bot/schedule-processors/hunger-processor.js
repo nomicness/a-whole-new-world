@@ -1,8 +1,10 @@
 (function () {
     'use strict';
-    var schedule = require('node-schedule'),
+    var Q = require('q'),
+        schedule = require('node-schedule'),
         moment = require('moment-timezone'),
         _ = require('lodash'),
+        stringFormat = require('string-format'),
         config = require('../config/server-config.js'),
         logger = require('../utils/logger.js'),
         github = require('../utils/github.js'),
@@ -11,6 +13,16 @@
             job: null,
             jobSchedule: '0 0 15 * * 3',
             farmProduction: '/roll 1d12+12',
+            messages: {
+                famineTitle: '@{login} feed your population!',
+                famine: '@{login}\'s village of {villageName} has famine in their population! \n\n There are {farmCount} farms, which produced enough to feed {production} people this week. An additional {hungerCount} people need food.',
+                starvation: '@{login}\'s village, {villageName} had {deathCount} people starve to death.',
+                wipeOut: '@{login}\'s village has all starved to death. Their village has been removed, and their points have been reduced to 0.',
+                resolved: '@{login} has resolved their villages hungry population.'
+            },
+            labelTitles: {
+                hunger: 'Hunger'
+            },
             scheduleJob: function () {
                 if (hungerProcessor.job) {
                     hungerProcessor.job.cancel();
@@ -25,25 +37,65 @@
                 return 'NONE';
             },
             createHungerIssue: function (player, production) {
-                var message = '@' + player.name + '\'s village of ' + player.village.name +' has famine in their population! \n\n There are ' + player.village.farms + ' farms, which produced enough to feed ' + production + ' people this week. An additional ' + player.village.hunger + ' people need food.';
+                var message = stringFormat(hungerProcessor.messages.famine, {
+                    login: player.name,
+                    villageName: player.village.name,
+                    farmCount: player.village.farms,
+                    production: production,
+                    hungerCount: player.village.hunger
+                });
                 
                 logger.log('  - ' + message);
                 
                 return github.post({
                     endpoint: 'issues',
                     data: {
-                        title: '@' + player.name + ' feed your population!',
+                        title: stringFormat(hungerProcessor.messages.famineTitle, {login: player.name}),
                         body: message,
                         assignee: player.name,
                         labels: [
-                          'Hunger'
+                            hungerProcessor.labelTitles.hunger
                         ]
                     }
                 }).catch(logger.error);
             },
+            closeHungerIssues: function (player) {
+                if (_.get(player, 'village.hunger') <= 0) {
+                    return github.get({
+                        endpoint: 'issues',
+                        query: {
+                            labels: hungerProcessor.labelTitles.hunger,
+                            per_page: 100
+                        }
+                    }).then(function (issues) {
+                        if (!issues || !issues.length) {
+                            return;
+                        }
+                        return Q.all(_.map(issues, function (issue) {
+                            if (issue.assignee.login === player.name) {
+                                return github.sendCommentMessage(issue.comments_url, stringFormat(hungerProcessor.messages.resolved, {login: player.name}))
+                                .then(function () {
+                                    return github.patch({
+                                        path: issue.url,
+                                        data: {
+                                            state: 'closed'
+                                        }
+                                    });
+                                });
+                            }
+                        }));
+                    })
+                    .catch(logger.error);
+                }
+                return Q.when();
+            },
             processStarvation: function (playerData, player) {
                 var deathCount = Math.min(player.village.population, player.village.hunger),
-                    message = '@' + player.name + '\'s village, ' + player.village.name + ' had ' + deathCount + ' people starve to death.';
+                    message = stringFormat(hungerProcessor.messages.starvation, {
+                        login: player.name,
+                        villageName: player.village.name,
+                        deathCount: deathCount
+                    });
             
                 logger.log('  - ' + message);
                 
@@ -89,7 +141,9 @@
                 if (player.village.population === 0) {
                     delete player.village;
                     player.points = 0;
-                    github.updatePlayerFile(playerData, '@' + player.name + '\'s village has all starved to death. Their village has been removed, and their points have been reduced to 0.');
+                    github.updatePlayerFile(playerData, stringFormat(hungerProcessor.messages.wipeOut, {
+                        login: player.name
+                    }));
                     return;
                 }
 
