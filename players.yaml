@@ -7,7 +7,7 @@ activePlayers:
             overseer: ArchmageInc
             population: 95
             farms: 0
-            hunger: 0
+            hunger: 95
     -
         name: jimmyhmiller
         points: 90
@@ -15,6 +15,7 @@ activePlayers:
             name: Friesland
             population: 105
             farms: 0
+            hunger: 105
     -
         name: dilbert88
         points: 87
