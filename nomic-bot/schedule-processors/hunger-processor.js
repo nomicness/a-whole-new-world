@@ -9,7 +9,7 @@
         rollProcessor = require('../command-processors/roll-processor.js'),
         hungerProcessor = {
             job: null,
-            jobSchedule: '0 0 15 * * 1',
+            jobSchedule: '0 0 15 * * 3',
             farmProduction: '/roll 1d12+12',
             scheduleJob: function () {
                 if (hungerProcessor.job) {
