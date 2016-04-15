@@ -117,3 +117,9 @@ It is important, for parsing, that no other non-space characters be included in 
   - **SECTION 6** A negative Hunger value indicates a surplus and will be considered stored, and used to reduce the next Hunger calculation.
 
   - **SECTION 7** If a Village has a pre-existing positive Hunger value when Hunger strikes, Starvation will occur and the village's population will be reduced by the Hunger value.
+
+**331.** **POPULATION GROWTH:** An Active Player's Village will grow once per month using the following formula:
+```
+N = ⌊ N * e ^ (0.011 + ( 1 / ( (H + N) ^ 2 + 1) ) ) ⌋
+```
+Where N is the value of the population at the time of the calculation and H is the value of hunger at the time of the calculation.
