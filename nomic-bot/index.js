@@ -7,6 +7,7 @@
         logger = require('./utils/logger.js'),
         commentProcessor = require('./endpoint-processors/comment-processor.js'),
         hungerProcessor = require('./schedule-processors/hunger-processor.js'),
+        populationGrowthProcessor = require('./schedule-processors/population-growth-processor.js'),
         apiServer = new ApiServer(serverConfig);
     
     if (testing) {
@@ -15,4 +16,5 @@
     
     commentProcessor.initializeEndpoint(apiServer);
     hungerProcessor.scheduleJob();
+    populationGrowthProcessor.scheduleJob();
 }());
