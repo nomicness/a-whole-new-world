@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 420
+        points: '4200'
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -18,10 +18,10 @@ activePlayers:
             hunger: -8
     -
         name: dilbert88
-        points: 87
+        points: 95
     -
         name: rythompson
-        points: 43
+        points: '439'
     -
         name: thematrimix
         points: 18
