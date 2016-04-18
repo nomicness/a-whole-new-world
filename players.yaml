@@ -25,4 +25,7 @@ activePlayers:
     -
         name: thematrimix
         points: 18
+    -
+        name: allensb
+        points: 30
 inactivePlayers: []
