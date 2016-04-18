@@ -6,7 +6,7 @@
         voteProcessor = require('../command-processors/vote-processor.js'),
         openProcessor = {
             messages: {
-                otOwner: '@{login}, you cannot open a proposal which you did not create.',
+                notOwner: '@{login}, you cannot open a proposal which you did not create.',
                 notActive: '@{login}, you cannot open the proposal because you are not an active player.'
             },
             processOpen: function (commentsUrl, userLogin, requestBody) {
