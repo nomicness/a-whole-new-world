@@ -19,8 +19,8 @@
                 ordinal: /^([0-9]+)\s/,
                 positive: /^\s*yay\s*$/i,
                 negative: /^\s*nay\s*$/i,
-                processed: /^@(.*), your vote.*([0-9]+) points has been added/,
-                pending: /^@(.*), your vote.*([0-9]+) points will be added/
+                processed: /^@(.*), your vote.* ([0-9]+) points has been added/,
+                pending: /^@(.*), your vote.* ([0-9]+) points will be added/
             },
             messages: {
                 notOpen: '@{login}, this proposal is not open for voting. Your vote will not be counted.',
@@ -83,14 +83,14 @@
                                     
                                     processedUsers.push({
                                         login: processed[1],
-                                        value: processed[2]
+                                        value: Number(processed[2])
                                     });
                                 }
                                 
                                 if (pending && commentUser === github.userLogin && !_.find(processed, {login: pending[1]})) {
                                     pendingUsers.push({
                                         login: pending[1],
-                                        value: pending[2]
+                                        value: Number(pending[2])
                                     });
                                 }
                                 
