@@ -25,8 +25,8 @@
             messages: {
                 notOpen: '@{login}, this proposal is not open for voting. Your vote will not be counted.',
                 notActive: '@{login}, you are not an active player. Your vote will not be counted.',
-                processed: '@{login}, your vote has been processed, a quorum has been reached, and your incentive value of {value} points has been added to your account ballance.',
-                pending: '@{login}, your vote has been processed and once a quorum is reached, your incentive value of {value} points will be added to your account ballance.',
+                processed: '@{login}, your vote has been processed, a quorum has been reached, and your incentive value of {value} points has been added to your account balance.',
+                pending: '@{login}, your vote has been processed and once a quorum is reached, your incentive value of {value} points will be added to your account balance.',
                 update: 'Adding voting incentive for {playerTags}for proposal {proposal} (PR #{issueNumber}).'
             },
             processVote: function (commentsUrl, userLogin, requestBody) {
