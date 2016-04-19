@@ -123,3 +123,5 @@ It is important, for parsing, that no other non-space characters be included in 
 N = ⌊ N * e ^ (0.011 + ( 1 / ( (H + N) ^ 2 + 1) ) ) ⌋
 ```
 Where N is the value of the population at the time of the calculation and H is the value of hunger at the time of the calculation.
+
+**332.** Players should add a description of their village. Players will be rewarded 100 points the first time they add a description of their village.
