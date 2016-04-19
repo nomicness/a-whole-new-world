@@ -19,6 +19,11 @@ activePlayers:
     -
         name: dilbert88
         points: 95
+        village:
+            name: Silicon Valley
+            population: 89
+            farms: 0
+            hunger: 0
     -
         name: rythompson
         points: '52'
