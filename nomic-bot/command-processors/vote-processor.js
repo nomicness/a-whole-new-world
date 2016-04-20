@@ -15,10 +15,10 @@
                 quorum: 'Has Quorum'
             },
             expressions: {
-                vote: /^yay|nay$/i,
+                vote: /^yay$|^nay$/i,
                 ordinal: /^([0-9]+)\s/,
-                positive: /^\s*yay\s*$/i,
-                negative: /^\s*nay\s*$/i,
+                positive: /^yay$/i,
+                negative: /^nay$/i,
                 processed: /^@(.*), your vote.* ([0-9]+) points has been added/,
                 pending: /^@(.*), your vote.* ([0-9]+) points will be added/
             },

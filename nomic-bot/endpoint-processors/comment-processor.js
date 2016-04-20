@@ -12,7 +12,7 @@
         commentProcessor = {
             expressions: {
                 roll: /^\/roll/i,
-                vote: /^yay|nay$/i,
+                vote: /^yay$|^nay$/i,
                 open: /^\/open/i,
                 resolve: /^\/resolve/i,
                 close: /^\/close/i,
