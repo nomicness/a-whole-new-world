@@ -1,4 +1,4 @@
-# A Game of nomic
+# Welcome to Credo
 
 This is our game of nomic. If you wish to join, read through the laws.
 In order to become an active player, submit a Pull Request into the players.yaml file
