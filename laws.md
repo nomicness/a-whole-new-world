@@ -127,3 +127,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **332.** Players should add a description of their village. Players will be rewarded 100 points the first time they add a description of their village.
 
 **333.** All villages reside on the same planet. This planet's name is Credo.
+
+**335.** Players points may not be set or updated unless explicitly stated in the rules.
