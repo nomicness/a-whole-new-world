@@ -16,7 +16,7 @@
             },
             expressions: {
                 vote: /^yay|nay$/i,
-                ordinal: /^([0-9]+)\s/,
+                ordinal: /^([0-9]+)/,
                 positive: /^\s*yay\s*$/i,
                 negative: /^\s*nay\s*$/i,
                 processed: /^@(.*), your vote.* ([0-9]+) points has been added/,
