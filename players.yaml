@@ -7,7 +7,7 @@ activePlayers:
             overseer: ArchmageInc
             population: 95
             farms: 6
-            hunger: -38
+            hunger: -59
     -
         name: jimmyhmiller
         points: 142
@@ -15,7 +15,7 @@ activePlayers:
             name: Friesland
             population: 105
             farms: 6
-            hunger: -8
+            hunger: -18
     -
         name: dilbert88
         points: 127
@@ -23,7 +23,7 @@ activePlayers:
             name: 'Silicon Valley'
             population: 89
             farms: 0
-            hunger: 0
+            hunger: 89
     -
         name: rythompson
         points: 52
