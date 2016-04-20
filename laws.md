@@ -129,5 +129,3 @@ Where N is the value of the population at the time of the calculation and H is t
 **334.** **INITIAL PLAYER POINTS:** Active Players, upon their first creation, are awarded an initial point value equal to the last incentive value rewarded for Accepting a Rule Proposal.
 
 **335.** Players points may not be set or updated unless explicitly stated in the rules.
-
-
