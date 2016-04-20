@@ -10,7 +10,7 @@ activePlayers:
             hunger: -38
     -
         name: jimmyhmiller
-        points: 88
+        points: 100
         village:
             name: Friesland
             population: 105
