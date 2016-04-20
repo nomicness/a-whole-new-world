@@ -126,4 +126,6 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **332.** Players should add a description of their village. Players will be rewarded 100 points the first time they add a description of their village.
 
+**333.** All villages reside on the same planet. This planet's name is Credo.
+
 **334.** **INITIAL PLAYER POINTS:** Active Players, upon their first creation, are awarded an initial point value equal to the last incentive value rewarded for Accepting a Rule Proposal.
