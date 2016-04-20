@@ -40,10 +40,6 @@ In mail and computer games, instead of throwing a die, players subtract 291 from
 
 **207.** Each player always has exactly one vote.
 
-**210.** Players may not conspire or consult on the making of future rule-changes unless they are team-mates.
-
-The first paragraph of this rule does not apply to games by mail or computer.
-
 **211.** If two or more rules conflict with one another then the rule with the lowest ordinal number takes precedence.
 
 If at least one of the rules in conflict explicitly says of itself that it defers to another rule (or type of rule) or takes precedence over another rule (or type of rule), then such provisions shall supersede the numerical method for determining precedence.
