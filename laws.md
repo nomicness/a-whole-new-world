@@ -83,8 +83,6 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
 
-**320.** No point values may be manipulated outside of the rules. 
-
 **321.** Declarations of War made before this law was inacted are null and void. All open declarations should be closed.
 
 **325.** In order for a rule-change proposal to be adopted once a quorum is reached, more than 50% of the votes must be positive (yay). In the event of a tie, the proposal may either be removed by the creator, or it may remain open until the tie is broken.
