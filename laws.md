@@ -125,3 +125,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **333.** All villages reside on the same planet. This planet's name is Credo.
 
 **334.** **INITIAL PLAYER POINTS:** Active Players, upon their first creation, are awarded an initial point value equal to the last incentive value rewarded for Accepting a Rule Proposal.
+
+**336.** **FOLLOW THE FOOD:** Instead of dyeing from starvation, the starving population of a Village will migrate to the village with the lowest, non-positive, hunger (highest surplus). If no Village has a surplus at the time, the villagers follow the normal course. This rule superceedes **Section 7** of Rule **330**.
