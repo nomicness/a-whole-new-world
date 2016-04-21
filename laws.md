@@ -79,8 +79,6 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
 
-**320.** No point values may be manipulated outside of the rules. 
-
 **321.** Declarations of War made before this law was inacted are null and void. All open declarations should be closed.
 
 **325.** In order for a rule-change proposal to be adopted once a quorum is reached, more than 50% of the votes must be positive (yay). In the event of a tie, the proposal may either be removed by the creator, or it may remain open until the tie is broken.
@@ -126,4 +124,7 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **334.** **INITIAL PLAYER POINTS:** Active Players, upon their first creation, are awarded an initial point value equal to the last incentive value rewarded for Accepting a Rule Proposal.
 
+**335.** Players points may not be set or updated unless explicitly stated in the rules.
+
 **337.** People may move from one village to another. People are defined as a subset of a given village's population. After people have moved between villages the total amount of people post exchange must equal the total amount of people pre exchange. The players involved in the moving of people must all agree to the terms of the movement prior actually moving the people. Agreement will be done in the pr to move the people. Each player involved in the exchange must vote yay in order for the pr to be merged.
+
