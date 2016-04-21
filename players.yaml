@@ -32,7 +32,7 @@ activePlayers:
         points: 18
     -
         name: allensb
-        points: 78
+        points: 83
         village:
             name: 'Space Port'
             population: 113
