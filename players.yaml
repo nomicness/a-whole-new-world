@@ -32,10 +32,10 @@ activePlayers:
         points: 18
     -
         name: allensb
-        points: 33
+        points: 13
         village:
             name: 'Space Port'
             population: 113
-            farms: 5
-            hunger: -97
+            farms: 7
+            hunger: -137
 inactivePlayers: []
