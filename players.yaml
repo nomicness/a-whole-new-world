@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 773
+        points: 822
         village:
             name: Cormyr
             overseer: ArchmageInc
