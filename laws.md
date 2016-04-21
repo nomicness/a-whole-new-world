@@ -132,4 +132,4 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **340.** **SURPLUS EXCHANGE:** A player whose Village has a negative Hunger (a Surplus) may transfer any of that Surplus to any other Player's Village for any exchange which both Players agree.
 
-**341.** **POPULATION ALLOCATION:** Village Populations may be allocated to specific endevors. While allocated, they are still counted as part of the population and may only be allocated to a single endevor. Villagers who are not allocated are considered allocated to the general endevor.
+**341.** **POPULATION ALLOCATION:** Village Populations may be allocated to specific endeavors. While allocated, they are still counted as part of the population and may only be allocated to a single endeavor. Villagers who are not allocated are considered allocated to the general endeavor.
