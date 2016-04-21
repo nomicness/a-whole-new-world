@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 714
+        points: 722
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -18,7 +18,7 @@ activePlayers:
             hunger: -18
     -
         name: dilbert88
-        points: 114
+        points: 121
         village:
             name: 'Silicon Valley'
             population: 89
@@ -32,7 +32,7 @@ activePlayers:
         points: 18
     -
         name: allensb
-        points: 69
+        points: 78
         village:
             name: 'Space Port'
             population: 113
