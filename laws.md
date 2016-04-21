@@ -126,5 +126,7 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **335.** Players points may not be set or updated unless explicitly stated in the rules.
 
+**336.** **FOLLOW THE FOOD:** Instead of dyeing from starvation, the starving population of a Village will migrate to the village with the lowest, non-positive, hunger (highest surplus). If no Village has a surplus at the time, the villagers follow the normal course. This rule superceedes **Section 7** of Rule **330**.
+
 **337.** People may move from one village to another. People are defined as a subset of a given village's population. After people have moved between villages the total amount of people post exchange must equal the total amount of people pre exchange. The players involved in the moving of people must all agree to the terms of the movement prior actually moving the people. Agreement will be done in the pr to move the people. Each player involved in the exchange must vote yay in order for the pr to be merged.
 
