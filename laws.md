@@ -129,4 +129,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **338.** Players data may not be set or updated unless explicitly stated in the rules.
 
 **339.** If a source village has a positive Hunger value during a transfer of People, a positive Hunger value equal to the number of People involved in any transfer will follow the People to the destination village.
->>>>>>> origin/master
+
+**340.** **SURPLUS EXCHANGE:** A player whose Village has a negative Hunger (a Surplus) may transfer any of that Surplus to any other Player's Village for any exchange which both Players agree.
