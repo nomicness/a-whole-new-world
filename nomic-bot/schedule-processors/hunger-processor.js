@@ -13,6 +13,7 @@
             job: null,
             jobSchedule: '0 0 15 * * 3',
             farmProduction: '/roll 1d12+12',
+            farmersRequired: 2,
             messages: {
                 famineTitle: '@{login} feed your population!',
                 famine: '@{login}\'s village of {villageName} has famine in their population! \n\n There are {farmCount} active farms, which produced enough to feed {production} people this week. An additional {hungerCount} people need food.',
@@ -150,7 +151,7 @@
                 var farms = farmCount || _.get(player, 'village.farms', 0),
                     farmers = _.get(player, 'village.population.farming', 0);
 
-                return Math.floor(Math.max(0, farms - Math.max(0, farms * 2 - farmers) / 2));
+                return Math.floor(Math.max(0, farms - Math.max(0, farms * hungerProcessor.farmersRequired - farmers) / hungerProcessor.farmersRequired));
             },
             processFarmProduction: function (player, farms) {
                 var activeFarms = hungerProcessor.getActiveFarms(player, farms),
