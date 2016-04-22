@@ -5,7 +5,9 @@ activePlayers:
         village:
             name: Cormyr
             overseer: ArchmageInc
-            population: 111
+            population: 
+                general: 99
+                farming: 12
             farms: 6
             hunger: -43
     -
