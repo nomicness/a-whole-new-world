@@ -89,8 +89,47 @@
                 }
                 return Q.when();
             },
+            reducePopulation: function (player, amount) {
+                if (!_.get(player, 'village.population') || !_.isObject(player.village.population)) {
+                    return 0;
+                }
+                if (amount <= player.village.population.general) {
+                    player.village.population.general -= amount;
+                    return 0;
+                }
+
+                amount += player.village.population.general;
+                player.village.population.general = 0;
+
+                var keys = _.keys(player.village.population);
+
+                _.each(keys, function (key, index) {
+                    if (player.village.population[key] <= 0) {
+                        keys.splice(index, 1);
+                    }
+                });
+
+                _.times(amount, function () {
+                    var index = _.random(0, keys.length - 1),
+                        key = keys[index];
+
+                    if (!keys.length) {
+                        return;
+                    }
+
+                    player.village.population[key]--;
+                    amount--;
+                    if (player.village.population[key] <= 0) {
+                        keys.splice(index, 1);
+                    }
+                });
+
+                return amount;
+
+            },
             processStarvation: function (playerData, player) {
-                var deathCount = Math.min(player.village.population, player.village.hunger),
+                var populationCount = hungerProcessor.getTotalPopulation(player),
+                    deathCount = Math.min(populationCount, player.village.hunger),
                     message = stringFormat(hungerProcessor.messages.starvation, {
                         login: player.name,
                         villageName: player.village.name,
@@ -99,7 +138,8 @@
             
                 logger.log('  - ' + message);
                 
-                player.village.population -= deathCount;
+                hungerProcessor.reducePopulation(player, deathCount);
+
                 player.village.hunger = 0;
 
                 github.updatePlayerFile(playerData, message);
@@ -134,11 +174,17 @@
                     return;
                 }
 
+                if (_.isNumber(player.village.population)) {
+                    player.village.population = {
+                        general: player.village.population
+                    };
+                }
+
                 if (player.village.hunger > 0) {
                     hungerProcessor.processStarvation(playerData, player);
                 }
                 
-                if (player.village.population === 0) {
+                if (hungerProcessor.getTotalPopulation(player) === 0) {
                     delete player.village;
                     player.points = 0;
                     github.updatePlayerFile(playerData, stringFormat(hungerProcessor.messages.wipeOut, {
@@ -147,11 +193,12 @@
                     return;
                 }
 
-                var production = hungerProcessor.processFarmProduction(player);
+                var production = hungerProcessor.processFarmProduction(player),
+                    populationCount = hungerProcessor.getTotalPopulation(player);
 
-                player.village.hunger += player.village.population;
+                player.village.hunger += populationCount;
 
-                logger.log('  - ' + player.name + ': population - ' + player.village.population + ' | hunger: ' + player.village.hunger);
+                logger.log('  - ' + player.name + ': population - ' + populationCount + ' | hunger: ' + player.village.hunger);
 
                 if (player.village.hunger > 0 ) {
                     hungerProcessor.createHungerIssue(player, production);
@@ -176,6 +223,9 @@
                                 logger.info('Finished Hunger Process. Next Hunger Job Scheduled to run at ' + hungerProcessor.getNextRun());
                             });
                     });
+            },
+            getTotalPopulation: function (player) {
+                return _.sum(_.values(_.get(player, 'village.population')));
             }
         };
 
