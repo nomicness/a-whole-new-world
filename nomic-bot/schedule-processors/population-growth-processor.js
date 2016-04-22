@@ -55,9 +55,24 @@
                     logger.log('  - ' + player.name + ': NO POPULATION');
                     return;
                 }
-                player.village.population = populationGrowthProcessor.growthFunction(player.village.population, player.village.hunger);
 
-                logger.log('  - ' + player.name + ': population - ' + player.village.population + ' | hunger: ' + player.village.hunger);
+                if (_.isNumber(player.village.population)) {
+                    player.village.population = {
+                        general: player.village.population
+                    };
+                }
+
+                var populationCount = populationGrowthProcessor.getTotalPopulation(player),
+                    newPopulationCount = populationGrowthProcessor.growthFunction(populationCount, player.village.hunger),
+                    populationGrowth = newPopulationCount - populationCount;
+
+                player.village.population.general += populationGrowth;
+
+                logger.log('  - ' + player.name + ': population - ' + newPopulationCount + ' | hunger: ' + player.village.hunger);
+                
+            },
+            getTotalPopulation: function (player) {
+                return _.sum(_.values(_.get(player, 'village.population')));
             }
         };
 
