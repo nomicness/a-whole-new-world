@@ -13,9 +13,10 @@
             job: null,
             jobSchedule: '0 0 15 * * 3',
             farmProduction: '/roll 1d12+12',
+            farmersRequired: 2,
             messages: {
                 famineTitle: '@{login} feed your population!',
-                famine: '@{login}\'s village of {villageName} has famine in their population! \n\n There are {farmCount} farms, which produced enough to feed {production} people this week. An additional {hungerCount} people need food.',
+                famine: '@{login}\'s village of {villageName} has famine in their population! \n\n There are {farmCount} active farms, which produced enough to feed {production} people this week. An additional {hungerCount} people need food.',
                 starvation: '@{login}\'s village, {villageName} had {deathCount} people starve to death.',
                 wipeOut: '@{login}\'s village has all starved to death. Their village has been removed, and their points have been reduced to 0.',
                 resolved: '@{login} has resolved their villages hungry population.'
@@ -40,7 +41,7 @@
                 var message = stringFormat(hungerProcessor.messages.famine, {
                     login: player.name,
                     villageName: player.village.name,
-                    farmCount: player.village.farms,
+                    farmCount: hungerProcessor.getActiveFarms(player),
                     production: production,
                     hungerCount: player.village.hunger
                 });
@@ -146,13 +147,18 @@
                 
                 return deathCount;
             },
+            getActiveFarms: function (player, farmCount) {
+                var farms = farmCount || _.get(player, 'village.farms', 0),
+                    farmers = _.get(player, 'village.population.farming', 0);
+
+                return Math.floor(Math.max(0, farms - Math.max(0, farms * hungerProcessor.farmersRequired - farmers) / hungerProcessor.farmersRequired));
+            },
             processFarmProduction: function (player, farms) {
-                var playerFarms = (player && player.village && player.village.farms) || 0,
-                    farmCount = _.isNumber(farms) ? farms : playerFarms,
-                    production = _.sum(_.times(farmCount, _.partial(rollProcessor.sum, hungerProcessor.farmProduction, {}))),
-                    currentHunger = (player && player.village && player.village.hunger) || 0;
+                var activeFarms = hungerProcessor.getActiveFarms(player, farms),
+                    production = _.sum(_.times(activeFarms, _.partial(rollProcessor.sum, hungerProcessor.farmProduction, {}))),
+                    currentHunger = _.get(player, 'village.hunger', 0);
                 
-                logger.log('  - Processing Farm Production for ' + player.name + ': ' + farmCount + ' - ' + production);
+                logger.log('  - Processing Farm Production for ' + player.name + ': ' + activeFarms + ' - ' + production);
                 
                 if (!player || !player.village) {
                     return 0;
