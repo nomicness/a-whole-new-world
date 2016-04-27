@@ -15,19 +15,20 @@ activePlayers:
         points: 278
         village:
             name: Friesland
-            population: 105
+            population:
+                general: 105
             farms: 6
-            hunger: -18
+            hunger: 87
     -
         name: dilbert88
         points: 212
         village:
             name: 'Silicon Valley'
             population:
-                general: 65
+                general: 64
                 farming: 8
             farms: 4
-            hunger: 1
+            hunger: 0
     -
         name: rythompson
         points: 52
