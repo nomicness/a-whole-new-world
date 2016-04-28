@@ -135,3 +135,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **341.** **POPULATION ALLOCATION:** Village Populations may be allocated to specific endeavors. While allocated, they are still counted as part of the population and may only be allocated to a single endeavor. Villagers who are not allocated are considered allocated to the general endeavor.
 
 **342.** **FARMING ENDEAVOR:** Each farm requires 2 villagers allocated to the farming endeavor in order to produce.
+
+**343.** **INITIAL PLAYER POINTS:** New Players, upon their first creation, will are awarded an initial point value set by a roll (1d12 + 12).
