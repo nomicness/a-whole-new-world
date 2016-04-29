@@ -14,7 +14,7 @@
 
 **107.** No rule-change may take effect earlier than the moment of the completion of the vote that adopted it, even if its wording explicitly states otherwise. No rule-change may have retroactive application.
 
-**108.** Each proposed rule-change shall be given a number for reference. The numbers shall begin with 301, and each rule-change proposed in the proper way shall receive the next successive integer, whether or not the proposal is adopted.
+**108.** Each proposal shall be given a number for reference. The numbers shall begin with 301, and each proposal proposed in the proper way shall receive the next successive integer, whether or not the proposal is adopted.
 
 If a rule is repealed and reenacted, it receives the number of the proposal to reenact it. If a rule is amended it receives the number of the proposal to amend  it. If an amendment is amended or repealed, the entire rule of which it is a part receives the number of the proposal to amend or repeal the amendment.
 
@@ -31,6 +31,8 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 **115.** Rule-changes that affect rules needed to allow or apply rule-changes are as permissible as other rule-changes. Even rule-changes that amend or repeal their own authority are permissible. No rule-change or type of move is impermissible solely on account of the self-reference or self-application of a rule.
 
 **116.** Whatever is not prohibited or regulated by a rule is permitted and unregulated, with the sole exception of changing the rules, which is permitted only when a rule or set of rules explicitly or implicitly permits it.
+
+**117.** A proposal is a rule-change or collection of rule-changes.
 
 **202.** One turn consists of two parts in this order: (1) proposing one rule-change and having it voted on, and (2) throwing one die once and adding the number of points on its face to one's score.
 
