@@ -7,19 +7,19 @@
         rollProcessor = require('../command-processors/roll-processor.js'),
         joinProcessor = {
             messages: {
-                notOwner: '@{login}, you cannot join in an issue you did not create.',
-                playerCreated: '{login} player has been created!'
+                playerCreated: '{login} player has been created!',
+                playerAlreadyCreated: '{login} player has already been created!'
             },
             initialPoints: '/roll 1d12 + 12',
             processJoin: function (commentsUrl, userLogin, requestBody) {
-                if (requestBody.issue.user.login !== userLogin) {
-                    return github.sendCommentMessage(commentsUrl, stringFormat(joinProcessor.messages.notOwner, {login: userLogin}));
-                }
-                
                 return github.getPlayerData()
                 .then(function (playerData) {
                     var activePlayers = playerData.activePlayers;
                     
+                    if (_.find(activePlayers, {name: userLogin})) {
+                        return github.sendCommentMessage(commentsUrl, stringFormat(joinProcessor.messages.playerAlreadyCreated, {login: userLogin}));
+                    }
+
                     var player = {
                         name: userLogin,
                         points: rollProcessor.sum(joinProcessor.initialPoints, {})
