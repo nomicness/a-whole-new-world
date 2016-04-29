@@ -122,8 +122,6 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **333.** All villages reside on the same planet. This planet's name is Credo.
 
-**334.** **INITIAL PLAYER POINTS:** Active Players, upon their first creation, are awarded an initial point value equal to the last incentive value rewarded for Accepting a Rule Proposal.
-
 **337.** People may move from one village to another. People are defined as a subset of a given village's population. After people have moved between villages the total amount of people post exchange must equal the total amount of people pre exchange. The players involved in the moving of people must all agree to the terms of the movement prior actually moving the people. Agreement will be done in the pr to move the people. Each player involved in the exchange must vote yay in order for the pr to be merged.
 
 **338.** Players data may not be set or updated unless explicitly stated in the rules.

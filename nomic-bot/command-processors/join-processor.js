@@ -8,12 +8,10 @@
         joinProcessor = {
             messages: {
                 notOwner: '@{login}, you cannot join in an issue you did not create.',
-                playerCreated: ''
+                playerCreated: '{login} player has been created!'
             },
             initialPoints: '/roll 1d12 + 12',
             processJoin: function (commentsUrl, userLogin, requestBody) {
-                var labelsUrl = requestBody.issue.labels_url;
-
                 if (requestBody.issue.user.login !== userLogin) {
                     return github.sendCommentMessage(commentsUrl, stringFormat(joinProcessor.messages.notOwner, {login: userLogin}));
                 }
@@ -29,9 +27,9 @@
 
                     activePlayers.push(player);
 
-                    github.updatePlayerFile(getPlayerData);
+                    github.updatePlayerFile(playerData, stringFormat(joinProcessor.messages.playerCreated, {login: userLogin}));
 
-                    return github.addIssueLabels(labelsUrl, [voteProcessor.labelTitles.open]);
+                    return;
                 });
             }
         };
