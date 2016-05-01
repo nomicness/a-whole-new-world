@@ -6,7 +6,7 @@ activePlayers:
             name: Cormyr
             overseer: ArchmageInc
             population:
-                general: 99
+                general: 100
                 farming: 12
             farms: 6
             hunger: -43
@@ -16,7 +16,7 @@ activePlayers:
         village:
             name: Friesland
             population:
-                general: 105
+                general: 106
             farms: 6
             hunger: 87
     -
@@ -40,7 +40,8 @@ activePlayers:
         points: 142
         village:
             name: 'Space Port'
-            population: 113
+            population:
+                general: 114
             farms: 7
             hunger: -137
 inactivePlayers: []
