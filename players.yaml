@@ -40,8 +40,10 @@ activePlayers:
         points: 205
         village:
             name: 'Space Port'
+            overseer: allensb
             population:
-                general: 114
+                general: 100
+                farming: 14
             farms: 7
             hunger: -137
 inactivePlayers: []
