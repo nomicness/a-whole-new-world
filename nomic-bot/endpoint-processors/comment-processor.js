@@ -9,6 +9,7 @@
         closeProcessor = require('../command-processors/close-processor.js'),
         buyProcessor = require('../command-processors/buy-processor.js'),
         resolveProcessor = require('../command-processors/resolve-processor.js'),
+        joinProcessor = require('../command-processors/join-processor.js'),
         commentProcessor = {
             expressions: {
                 roll: /^\/roll/i,
@@ -16,7 +17,8 @@
                 open: /^\/open/i,
                 resolve: /^\/resolve/i,
                 close: /^\/close/i,
-                buy: /^\/buy/i
+                buy: /^\/buy/i,
+                join: /^\/join/i
             },
             initializeEndpoint: function (apiServer) {
                 if (!apiServer) {
@@ -67,6 +69,11 @@
                             .then(_.partial(sendResponse, responder));
                     }
 
+                    if (commentProcessor.expressions.join.test(commentBody)) {
+                        logger.info(userLogin + ' - ' + commentBody);
+                        return Q.when(joinProcessor.processJoin(commentsUrl, userLogin, request.body))
+                            .then(_.partial(sendResponse, responder));
+                    }
                 }
                 return responder.status(200).json();
             }
