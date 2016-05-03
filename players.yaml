@@ -12,14 +12,14 @@ activePlayers:
             hunger: -43
     -
         name: jimmyhmiller
-        points: 278
+        points: 268
         village:
             name: Friesland
             population:
                 general: 94
                 farming: 12
-            farms: 6
-            hunger: 87
+            farms: 7
+            hunger: 67
     -
         name: dilbert88
         points: 218
