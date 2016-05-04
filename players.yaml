@@ -9,7 +9,7 @@ activePlayers:
                 general: 100
                 farming: 12
             farms: 6
-            hunger: -43
+            hunger: -40
     -
         name: jimmyhmiller
         points: 328
@@ -19,7 +19,7 @@ activePlayers:
                 general: 94
                 farming: 12
             farms: 11
-            hunger: -2
+            hunger: -9
     -
         name: dilbert88
         points: 218
@@ -29,7 +29,7 @@ activePlayers:
                 general: 64
                 farming: 8
             farms: 4
-            hunger: 0
+            hunger: 11
     -
         name: rythompson
         points: 52
@@ -46,5 +46,5 @@ activePlayers:
                 general: 100
                 farming: 14
             farms: 7
-            hunger: -137
+            hunger: -153
 inactivePlayers: []
