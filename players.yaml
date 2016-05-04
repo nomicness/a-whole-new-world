@@ -31,9 +31,6 @@ activePlayers:
             farms: 4
             hunger: 0
     -
-        name: rythompson
-        points: 52
-    -
         name: thematrimix
         points: 36
     -
@@ -47,4 +44,7 @@ activePlayers:
                 farming: 14
             farms: 7
             hunger: -137
-inactivePlayers: []
+inactivePlayers:
+    -
+        name: rythompson
+        points: 52
