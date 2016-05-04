@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 955
+        points: 962
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -32,13 +32,13 @@ activePlayers:
             hunger: 11
     -
         name: rythompson
-        points: 52
+        points: 57
     -
         name: thematrimix
         points: 36
     -
         name: allensb
-        points: 205
+        points: 211
         village:
             name: 'Space Port'
             overseer: allensb
