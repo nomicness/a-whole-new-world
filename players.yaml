@@ -24,14 +24,14 @@ activePlayers:
             hunger: -9
     -
         name: dilbert88
-        points: 227
+        points: 217
         village:
             name: 'Silicon Valley'
             population:
                 general: 64
                 farming: 8
-            farms: 4
-            hunger: 11
+            farms: 5
+            hunger: -4
     -
         name: rythompson
         points: 57
