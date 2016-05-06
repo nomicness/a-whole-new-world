@@ -24,7 +24,7 @@ activePlayers:
             hunger: -9
     -
         name: dilbert88
-        points: 218
+        points: 227
         village:
             name: 'Silicon Valley'
             population:
