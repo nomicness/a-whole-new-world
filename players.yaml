@@ -12,6 +12,7 @@ activePlayers:
             farms: 6
             hunger: -40
             sawmills: 2
+            lumber: 21
     -
         name: jimmyhmiller
         points: 334
@@ -22,6 +23,7 @@ activePlayers:
                 farming: 12
             farms: 11
             hunger: -9
+            lumber: 0
     -
         name: dilbert88
         points: 217
@@ -32,6 +34,7 @@ activePlayers:
                 farming: 8
             farms: 5
             hunger: -4
+            lumber: 0
     -
         name: rythompson
         points: 57
@@ -50,4 +53,5 @@ activePlayers:
             farms: 7
             hunger: -153
             sawmills: 1
+            lumber: 0
 inactivePlayers: []
