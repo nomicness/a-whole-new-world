@@ -10,7 +10,7 @@ activePlayers:
                 farming: 12
                 logging: 12
             farms: 6
-            hunger: -37
+            hunger: -36
             sawmills: 2
             lumber: 36
     -
@@ -22,7 +22,7 @@ activePlayers:
                 general: 94
                 farming: 12
             farms: 11
-            hunger: -19
+            hunger: -31
             lumber: 0
     -
         name: dilbert88
@@ -33,7 +33,7 @@ activePlayers:
                 general: 64
                 farming: 8
             farms: 5
-            hunger: -11
+            hunger: -19
             lumber: 0
     -
         name: rythompson
@@ -51,7 +51,7 @@ activePlayers:
                 general: 100
                 farming: 14
             farms: 7
-            hunger: -176
+            hunger: -186
             sawmills: 1
             lumber: 0
 inactivePlayers: []
