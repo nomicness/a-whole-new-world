@@ -13,6 +13,20 @@ activePlayers:
             hunger: -37
             sawmills: 2
             lumber: 64
+inactivePlayers:
+    -
+        name: allensb
+        points: 118
+        village:
+            name: 'Space Port'
+            overseer: allensb
+            population:
+                general: 100
+                farming: 14
+            farms: 7
+            hunger: -207
+            sawmills: 1
+            lumber: 0
     -
         name: jimmyhmiller
         points: 334
@@ -36,22 +50,8 @@ activePlayers:
             hunger: -8
             lumber: 0
     -
-        name: rythompson
-        points: 57
-    -
         name: thematrimix
         points: 36
     -
-        name: allensb
-        points: 118
-        village:
-            name: 'Space Port'
-            overseer: allensb
-            population:
-                general: 100
-                farming: 14
-            farms: 7
-            hunger: -207
-            sawmills: 1
-            lumber: 0
-inactivePlayers: []
+        name: rythompson
+        points: 57
