@@ -12,7 +12,7 @@ activePlayers:
             farms: 6
             hunger: -44
             sawmills: 2
-            lumber: 75
+            lumber: 94
     -
         name: jimmyhmiller
         points: 334
