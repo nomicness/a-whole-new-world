@@ -13,6 +13,8 @@ activePlayers:
             hunger: -65
             sawmills: 2
             lumber: 150
+    
+inactivePlayers: 
     -
         name: jimmyhmiller
         points: 240
@@ -56,4 +58,3 @@ activePlayers:
             hunger: -275
             sawmills: 1
             lumber: 0
-inactivePlayers: []
