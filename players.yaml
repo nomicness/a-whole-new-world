@@ -15,7 +15,7 @@ activePlayers:
             lumber: 150
     -
         name: jimmyhmiller
-        points: 340
+        points: 240
         village:
             name: Friesland
             population:
@@ -24,6 +24,7 @@ activePlayers:
             farms: 11
             hunger: -33
             lumber: 0
+            sawmills: 1
     -
         name: dilbertKocik
         points: 217
