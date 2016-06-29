@@ -139,3 +139,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **345.** **SAWMILL PURCHASES:** All players with a village may purchase sawmills for one hundred (100) points each. Sawmills produce Lumber.
 
 **346.** **SAWMILL PRODUCTION:** Each Sawmill will produce 1d12+3 lumber per week as long as six (6) villagers per sawmill are allocated to the logging endevor. 
+
+**347.** **Synthetic Materials:** Any production of Synthetic Materials (Materials artificially created through chemical reactions) within a village reduces farm output by eight (8) units.
