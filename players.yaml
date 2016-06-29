@@ -1,46 +1,59 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 949
+        points: 886
         village:
             name: Cormyr
             overseer: ArchmageInc
             population:
-                general: 99
+                general: 88
                 farming: 12
+                logging: 12
             farms: 6
-            hunger: -43
+            hunger: -58
+            sawmills: 2
+            lumber: 150
     -
         name: jimmyhmiller
-        points: 278
+        points: 240
         village:
             name: Friesland
             population:
-                general: 105
-            farms: 6
-            hunger: 87
+                general: 82
+                farming: 12
+                logging: 12
+            farms: 11
+            hunger: -33
+            lumber: 0
+            sawmills: 1
     -
-        name: dilbert88
-        points: 212
+        name: dilbertKocik
+        points: 217
         village:
             name: 'Silicon Valley'
             population:
                 general: 64
                 farming: 8
-            farms: 4
-            hunger: 0
+            farms: 5
+            hunger: -7
+            lumber: 0
     -
         name: rythompson
-        points: 52
+        points: 57
     -
         name: thematrimix
         points: 36
     -
         name: allensb
-        points: 142
+        points: 123
         village:
             name: 'Space Port'
-            population: 113
+            overseer: allensb
+            population:
+                general: 100
+                farming: 14
             farms: 7
-            hunger: -137
+            hunger: -259
+            sawmills: 1
+            lumber: 0
 inactivePlayers: []

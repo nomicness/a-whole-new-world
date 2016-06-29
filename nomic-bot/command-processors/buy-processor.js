@@ -6,17 +6,20 @@
         hungerProcessor = require('../schedule-processors/hunger-processor.js'),
         buyProcessor = {
             costs: {
-                farm: 10
+                farm: 10,
+                sawmill: 100
             },
             expressions: {
-               farm: /\/buy\s*([0-9]*)\s*farm[s]?\s*$/i 
+               farm: /\/buy\s*([0-9]*)\s*farm[s]?\s*$/i,
+               sawmill: /\/buy\s*([0-9]*)\s*sawmill[s]?\s*$/i
             },
             messages: {
                 invalid: 'I\'m sorry @{login}, the request entered did not match any of my logic circuits for purchases. Please try something which matches one of the following:\n\n```javascript\n{expressions}```',
                 notActive: '@{login}, you are not an active player and cannot purchase anything.',
                 noVillage: '@{login}, you do not have a village and cannot purchase anything.',
                 nsf: '@{login}, you do not have enough points to purchase {count} {item}(s). You have {balance} points and need {cost} points.',
-                farm: '@{login} purchased {count} farm(s) for {cost} points, which produced enough food to feed {production} people.'
+                farm: '@{login} purchased {count} farm(s) for {cost} points, which produced enough food to feed {production} people.',
+                sawmill: '@{login} purchased {count} sawmill(s) for {cost} points, which produced {production} lumber.'
 
             },
             processBuy: function (commentsUrl, userLogin, requestBody) {
@@ -47,6 +50,39 @@
                 }
                 
                 return result;
+            },
+            sawmill: function (commentsUrl, requestBody, playerData, player) {
+                var purchaseInstruction = buyProcessor.expressions.sawmill.exec(requestBody.comment.body),
+                    count = Number(purchaseInstruction[1]) || 1,
+                    pointCost = count * buyProcessor.costs.sawmill,
+                    production = 0,
+                    message = '';
+
+                if (player.points < pointCost) {
+                    return github.sendCommentMessage(commentsUrl, stringFormat(buyProcessor.messages.nsf, {
+                        login: player.name,
+                        count: count,
+                        item: 'sawmill',
+                        balance: player.points,
+                        cost: pointCost
+                    }));
+                }
+
+                player.points -= pointCost;
+                player.village.sawmills = (player.village.sawmills || 0) + count;
+                message = stringFormat(buyProcessor.messages.sawmill, {
+                    login: player.name,
+                    count: count,
+                    cost: pointCost,
+                    production: production
+                });
+
+                github.sendCommentMessage(commentsUrl, message);
+
+                return hungerProcessor.closeHungerIssues(player)
+                .then(function () {
+                    return github.updatePlayerFile(playerData, message);
+                });
             },
             farm: function (commentsUrl, requestBody, playerData, player) {
                 var purchaseInstruction = buyProcessor.expressions.farm.exec(requestBody.comment.body),

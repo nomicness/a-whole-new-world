@@ -124,8 +124,6 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **333.** All villages reside on the same planet. This planet's name is Credo.
 
-**334.** **INITIAL PLAYER POINTS:** Active Players, upon their first creation, are awarded an initial point value equal to the last incentive value rewarded for Accepting a Rule Proposal.
-
 **337.** People may move from one village to another. People are defined as a subset of a given village's population. After people have moved between villages the total amount of people post exchange must equal the total amount of people pre exchange. The players involved in the moving of people must all agree to the terms of the movement prior actually moving the people. Agreement will be done in the pr to move the people. Each player involved in the exchange must vote yay in order for the pr to be merged.
 
 **338.** Players data may not be set or updated unless explicitly stated in the rules.
@@ -137,3 +135,9 @@ Where N is the value of the population at the time of the calculation and H is t
 **341.** **POPULATION ALLOCATION:** Village Populations may be allocated to specific endeavors. While allocated, they are still counted as part of the population and may only be allocated to a single endeavor. Villagers who are not allocated are considered allocated to the general endeavor.
 
 **342.** **FARMING ENDEAVOR:** Each farm requires 2 villagers allocated to the farming endeavor in order to produce.
+
+**344.** **INITIAL PLAYER POINTS:** New Players, upon their first creation, will be awarded an initial point value set by a roll (1d12 + 12).
+
+**345.** **SAWMILL PURCHASES:** All players with a village may purchase sawmills for one hundred (100) points each. Sawmills produce Lumber.
+
+**346.** **SAWMILL PRODUCTION:** Each Sawmill will produce 1d12+3 lumber per week as long as six (6) villagers per sawmill are allocated to the logging endevor. 
