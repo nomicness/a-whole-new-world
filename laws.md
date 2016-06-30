@@ -8,8 +8,6 @@
 
 **104.** All rule-changes proposed in the proper way shall be voted on. They will be adopted if and only if they receive the required number of votes.
 
-**105.** A player may only have one active rule-change at a time. The player may cancel that rule-change they have created at any time. If they cancel a rule-change the rule-change is not accepted.
-
 **106.** All proposed rule-changes shall be written down before they are voted on. If they are adopted, they shall guide play in the form in which they were voted on.
 
 **107.** No rule-change may take effect earlier than the moment of the completion of the vote that adopted it, even if its wording explicitly states otherwise. No rule-change may have retroactive application.
