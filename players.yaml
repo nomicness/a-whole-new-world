@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 942
+        points: 951
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -15,7 +15,7 @@ activePlayers:
             lumber: 150
     -
         name: jimmyhmiller
-        points: 240
+        points: 247
         village:
             name: Friesland
             population:
@@ -28,7 +28,7 @@ activePlayers:
             sawmills: 1
     -
         name: dilbertKocik
-        points: 217
+        points: 222
         village:
             name: 'Silicon Valley'
             population:
