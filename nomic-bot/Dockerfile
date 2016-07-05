@@ -18,6 +18,8 @@ WORKDIR /nomic-bot
 
 RUN npm install
 
+RUN npm run build
+
 EXPOSE 80
 
-CMD node index.js
+CMD npm run serve

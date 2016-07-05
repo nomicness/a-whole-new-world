@@ -2,8 +2,7 @@
     'use strict';
     module.exports = {
         protocol: 'http',
-        port: 80,
-        host: 'api.nomic.archmageinc.com',
+        port: 2222,
         timezone: 'America/New_York'
     };
 }());
