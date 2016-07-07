@@ -1,7 +1,11 @@
-const action = (type, f=identity) => {
-    const actionCreator = (obj) => Object.assign({}, {
-        type: type
-    }, f(obj))
+
+const noop = () => ({});
+
+const action = (type, f=noop) => {
+    const actionCreator = (obj) => ({
+        ...f(obj),
+        type,
+    })
     actionCreator.type = type;
     return actionCreator;
 }
