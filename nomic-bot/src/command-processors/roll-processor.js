@@ -9,7 +9,8 @@
                 sum: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]*)$/,
                 subtraction: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\-\s*([0-9]*)$/
             },
-            processRoll: function (commentsUrl, userLogin, comment) {
+            processRoll: function (commentsUrl, userLogin, requestBody) {
+                const comment = requestBody.comment.body;
                 var baseExpression = /([0-9]+)\s*[dD]\s*([0-9]+)/,
                     rollInstruction = baseExpression.exec(comment),
                     dieCount = rollInstruction ? Number(rollInstruction[1]) : 0,
