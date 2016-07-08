@@ -8,7 +8,7 @@ import _ from 'lodash';
 const findPlayer = (name, players) =>_.find(players, { name })
 
 export async function bang(command, request, fn) {
-    const { activePlayers: players, inActivePlayers } = await getPlayerData()
+    const { activePlayers: players, inactivePlayers } = await getPlayerData()
     const player = findPlayer(request.comment.user.login, players);
     const commentsUrl = request.issue.comments_url;
     const comment = request.comment.body;
@@ -16,7 +16,7 @@ export async function bang(command, request, fn) {
     const world = { 
         player,
         players,
-        inActivePlayers,
+        inactivePlayers,
         commentsUrl,
         comment,
     }

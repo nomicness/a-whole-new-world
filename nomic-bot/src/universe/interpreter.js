@@ -7,10 +7,13 @@ import { updatePlayerFile, sendCommentMessage } from '../utils/github'
 
 const commentToMessage = (comment, player) => `${player.name} - ${comment}`
 
-const updatePlayer = ({ player }, { comment, players }) => {
+const updatePlayer = ({ player }, { comment, players, inactivePlayers }) => {
     const playerIndex = _.findIndex(players, p => p.name === player.name);
     players[playerIndex] = player;
-    return updatePlayerFile(players, commentToMessage(comment, player))
+    return updatePlayerFile({ 
+        activePlayers: players, 
+        inactivePlayers,
+    }, commentToMessage(comment, player))
 }
 
 const createComment = ({ comment }, { commentsUrl }) => {
