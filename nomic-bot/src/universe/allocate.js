@@ -6,7 +6,7 @@ export default ({args: [amount, job, _, from="general"]}, { player }) => {
     player.village.population[from] = player.village.population[from] || 0;
     player.village.population[from] -= Number(amount);
     if (player.village.population[from] < 0) {
-        return [createComment(`You do not have enough ${from} population to allocate ${amount} ${jobs}, ${player.name}`)]
+        return [createComment(`You do not have enough ${from} population to allocate ${amount} ${job}, ${player.name}`)]
     }
     return [
         updatePlayer(player), 
