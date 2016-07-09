@@ -1,4 +1,3 @@
-'use strict';
 import Q from 'q';
 import schedule from 'node-schedule';
 import moment from 'moment-timezone';

@@ -1,5 +1,3 @@
-'use strict';
-
 export default {
     protocol: 'http',
     port: process.env.PORT || 80,

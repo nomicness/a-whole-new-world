@@ -1,5 +1,3 @@
-'use strict';
-
 export default {
     bot: {
         userLogin: 'nomic-bot'

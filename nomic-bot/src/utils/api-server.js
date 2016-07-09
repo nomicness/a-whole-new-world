@@ -1,4 +1,3 @@
-'use strict';
 import _ from 'lodash';
 import express from 'express';
 import bodyParser from 'body-parser';

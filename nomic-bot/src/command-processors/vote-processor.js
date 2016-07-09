@@ -1,4 +1,3 @@
-'use strict';
 import _ from 'lodash';
 import stringFormat from 'string-format';
 import logger from '../utils/logger.js';

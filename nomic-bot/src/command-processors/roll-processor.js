@@ -1,4 +1,3 @@
-'use strict';
 import _ from 'lodash';
 import github from '../utils/github.js';
 const rollProcessor = {

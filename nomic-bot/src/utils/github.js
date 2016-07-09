@@ -1,4 +1,3 @@
-'use strict';
 import _ from 'lodash';
 import https from 'https';
 import queryString from 'querystring';
