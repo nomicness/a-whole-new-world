@@ -1,6 +1,7 @@
 import multi from 'multiple-methods';
 import _ from 'lodash';
-import { updatePlayerFile, sendCommentMessage } from '../utils/github'
+import github from '../utils/github';
+const { updatePlayerFile, sendCommentMessage } = github;
 
 // each interpreter has a type signature of:
 // Action -> World -> ()
