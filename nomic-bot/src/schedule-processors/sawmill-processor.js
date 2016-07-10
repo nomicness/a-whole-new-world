@@ -1,4 +1,3 @@
-'use strict';
 import schedule from 'node-schedule';
 import moment from 'moment-timezone';
 import _ from 'lodash';
