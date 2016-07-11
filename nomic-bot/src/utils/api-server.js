@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import express from 'express';
 import bodyParser from 'body-parser';
-import logger from '../utils/logger.js';
+import * as logger from '../utils/logger.js';
 
 
 function ApiServer(options) {
