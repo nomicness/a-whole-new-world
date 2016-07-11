@@ -1,6 +1,5 @@
 import _ from 'lodash';
-import github from '../utils/github';
-const { getPlayerData } = github;
+import { getPlayerData } from '../utils/github';
 
 // Every one of our commands are going to have the following type signature:
 // Command -> World -> {world :: World, actions :: List Action}
