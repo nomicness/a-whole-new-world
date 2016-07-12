@@ -1,4 +1,3 @@
-
 const noop = () => ({});
 
 const action = (type, f=noop) => {
