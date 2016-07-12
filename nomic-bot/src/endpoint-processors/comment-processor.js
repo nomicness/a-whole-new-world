@@ -2,14 +2,14 @@ import Q from 'q';
 import _ from 'lodash';
 import multi from 'multiple-methods';
 
-import logger from '../utils/logger.js';
-import rollProcessor from '../command-processors/roll-processor.js';
-import voteProcessor from '../command-processors/vote-processor.js';
-import openProcessor from '../command-processors/open-processor.js';
-import closeProcessor from '../command-processors/close-processor.js';
-import buyProcessor from '../command-processors/buy-processor.js';
-import resolveProcessor from '../command-processors/resolve-processor.js';
-import joinProcessor from '../command-processors/join-processor.js';
+import * as logger from '../utils/logger.js';
+import * as rollProcessor from '../command-processors/roll-processor.js';
+import * as voteProcessor from '../command-processors/vote-processor.js';
+import * as openProcessor from '../command-processors/open-processor.js';
+import * as closeProcessor from '../command-processors/close-processor.js';
+import * as buyProcessor from '../command-processors/buy-processor.js';
+import * as resolveProcessor from '../command-processors/resolve-processor.js';
+import * as joinProcessor from '../command-processors/join-processor.js';
 import * as universe from '../universe';
 
 
