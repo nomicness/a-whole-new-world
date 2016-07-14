@@ -53,8 +53,9 @@ activePlayers:
             name: 'Space Port'
             overseer: allensb
             population:
-                general: 101
+                general: 100
                 farming: 14
+                logging: 1
             farms: 7
             hunger: -288
             sawmills: 1
