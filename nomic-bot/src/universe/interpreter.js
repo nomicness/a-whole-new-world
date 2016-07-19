@@ -1,6 +1,7 @@
 import multi from 'multiple-methods';
 import _ from 'lodash';
 import { updatePlayerFile, sendCommentMessage } from '../utils/github'
+import * as actions from './actions';
 
 // each interpreter has a type signature of:
 // Action -> World -> ()
@@ -21,7 +22,7 @@ const createComment = ({ comment }, { commentsUrl }) => {
 }
 
 export const interpret = multi(action => action.type)
-    .method('updatePlayer', updatePlayer)
-    .method('createComment', createComment)
+    .method(actions.updatePlayer.type, updatePlayer)
+    .method(actions.createComment.type, createComment)
     .defaultMethod(_.noop)
 
