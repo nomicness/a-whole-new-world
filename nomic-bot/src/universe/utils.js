@@ -8,3 +8,10 @@ export const action = (type, f=noop) => {
     actionCreator.type = type;
     return actionCreator;
 }
+
+
+export const commentToCommand = ([type, ...args]) => ({
+    type,
+    args,
+})
+
