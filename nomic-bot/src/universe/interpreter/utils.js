@@ -7,5 +7,5 @@ const interpreter = multi(action => action.type)
     .defaultMethod(_.noop)
 
 
-export const addInterpretation = (type, fn) => interpreter.method(type, fn);
+export const addInterpretation = (type, fn) => interpreter.method(_.isString(type) ? type : type.type, fn);
 export default interpreter;
