@@ -1,8 +1,7 @@
 import _ from 'lodash';
 import { bang } from './big-bang';
 import interpret from './interpreter';
-import commands from './register-commands';
-import './commands';
+import commands from './commands';
 import { commentToCommand } from './utils';
 
 export async function create(requestBody) {

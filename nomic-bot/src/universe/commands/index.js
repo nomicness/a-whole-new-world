@@ -3,5 +3,6 @@ import './allocate';
 
 
 // Exports
-export { addCommand } from '../register-commands';
+export { addCommand } from './utils';
 export * from '../actions';
+export default from './utils';
