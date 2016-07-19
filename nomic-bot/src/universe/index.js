@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { bang } from './big-bang';
-import { interpret } from './interpreter';
+import interpret from './interpreter';
 import commands from './register-commands';
 import './commands';
 import { commentToCommand } from './utils';
