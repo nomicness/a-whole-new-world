@@ -16,7 +16,7 @@ activePlayers:
             happiness: 0
     -
         name: jimmyhmiller
-        points: 450
+        points: 510
         village:
             name: Friesland
             population:
