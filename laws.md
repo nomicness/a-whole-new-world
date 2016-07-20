@@ -143,3 +143,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **348.** **Happiness:** Each village has a happiness level. Each village starts off with 0 Happiness. Happiness ranges from -5 to +5. Happiness may only be changed in a village as explicitly stated in the rules.
 
 **350** Adding features to the bot is a proposal. All voting rules that apply to rule changes also apply to adding features to the bot. This rule does not apply to bug fixes.
+
+**351** *No More Nomads:** A player may not be active unless they have a village. All active players who do not have a village at the time of this proposal is accepted will be moved to inactive.
