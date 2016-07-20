@@ -141,3 +141,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **347.** **Synthetic Materials:** Any production of Synthetic Materials (Materials artificially created through chemical reactions) within a village reduces farm output by eight (8) units.
 
 **348.** **Happiness:** Each village has a happiness level. Each village starts off with 0 Happiness. Happiness ranges from -5 to +5. Happiness may only be changed in a village as explicitly stated in the rules.
+
+**351** *No More Nomads:** A player may not be active unless they have a village. All active players who do not have a village at the time of this proposal is accepted will be moved to inactive.
