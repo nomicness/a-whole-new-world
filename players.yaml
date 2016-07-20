@@ -41,12 +41,6 @@ activePlayers:
             lumber: 0
             happiness: 0
     -
-        name: rythompson
-        points: 57
-    -
-        name: thematrimix
-        points: 36
-    -
         name: allensb
         points: 137
         village:
@@ -60,4 +54,10 @@ activePlayers:
             hunger: -293
             sawmills: 1
             lumber: 5
-inactivePlayers: []
+inactivePlayers: 
+    -
+        name: rythompson
+        points: 57
+    -
+        name: thematrimix
+        points: 36
