@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 962
+        points: 967
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -16,7 +16,7 @@ activePlayers:
             happiness: 0
     -
         name: jimmyhmiller
-        points: 373
+        points: 378
         village:
             name: Friesland
             population:
@@ -48,7 +48,7 @@ activePlayers:
         points: 36
     -
         name: allensb
-        points: 123
+        points: 130
         village:
             name: 'Space Port'
             overseer: allensb
