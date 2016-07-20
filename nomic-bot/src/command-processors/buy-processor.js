@@ -8,10 +8,6 @@ export const costs = {
     sawmill: 100
 };
 
-export const expressions = {
-   farm: /\/buy\s*([0-9]*)\s*farm[s]?\s*$/i,
-   sawmill: /\/buy\s*([0-9]*)\s*sawmill[s]?\s*$/i
-};
 
 export const messages = {
     invalid: 'I\'m sorry @{login}, the request entered did not match any of my logic circuits for purchases. Please try something which matches one of the following:\n\n```javascript\n{expressions}```',
@@ -27,7 +23,7 @@ export const processBuy = function (commentsUrl, userLogin, requestBody) {
     const comment = requestBody.comment.body;
     let result;
 
-    _.each(expressions, function (expression, methodName) {
+    _.each(expressions, function ({ expression, fn }) {
         if (expression.test(comment)) {
             result = github.getPlayerData()
                 .then(function (playerData) {
@@ -41,7 +37,7 @@ export const processBuy = function (commentsUrl, userLogin, requestBody) {
                         return github.sendCommentMessage(commentsUrl, stringFormat(messages.noVillage, {login: userLogin}));
                     }
 
-                    return methodName(commentsUrl, requestBody, playerData, player);
+                    return fn(commentsUrl, requestBody, playerData, player);
                 });
         }
     });
@@ -54,7 +50,7 @@ export const processBuy = function (commentsUrl, userLogin, requestBody) {
 };
 
 export const sawmill = function (commentsUrl, requestBody, playerData, player) {
-    const purchaseInstruction = expressions.sawmill.exec(requestBody.comment.body);
+    const purchaseInstruction = sawmillMatcher.expression.exec(requestBody.comment.body);
     const count = Number(purchaseInstruction[1]) || 1;
     const pointCost = count * costs.sawmill;
     const production = 0;
@@ -88,7 +84,7 @@ export const sawmill = function (commentsUrl, requestBody, playerData, player) {
 };
 
 export const farm = function (commentsUrl, requestBody, playerData, player) {
-    const purchaseInstruction = expressions.farm.exec(requestBody.comment.body);
+    const purchaseInstruction = farmMatcher.expression.exec(requestBody.comment.body);
     const farmCount = Number(purchaseInstruction[1]) || 1;
     const pointCost = farmCount * costs.farm;
     let production = 0;
@@ -133,3 +129,17 @@ function sendInvalidCommand(url, userLogin) {
         expressions: expressions
     }));
 }
+
+
+const farmMatcher = {
+    expression: /\/buy\s*([0-9]*)\s*farm[s]?\s*$/i,
+    fn: farm,
+}
+
+const sawmillMatcher = {
+    expression: /\/buy\s*([0-9]*)\s*sawmill[s]?\s*$/i,
+    fn: sawmill,
+}
+
+
+export const expressions = [farmMatcher, sawmillMatcher];
