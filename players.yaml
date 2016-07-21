@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 976
+        points: 966
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -9,8 +9,8 @@ activePlayers:
                 general: 89
                 farming: 12
                 logging: 12
-            farms: 6
-            hunger: -59
+            farms: 7
+            hunger: -74
             sawmills: 2
             lumber: 207
             happiness: 0
@@ -54,7 +54,7 @@ activePlayers:
             hunger: -293
             sawmills: 1
             lumber: 5
-inactivePlayers: 
+inactivePlayers:
     -
         name: rythompson
         points: 57
