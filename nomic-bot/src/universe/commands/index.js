@@ -1,5 +1,6 @@
 // Import your command here
 import './allocate';
+import './open';
 
 
 // Exports
