@@ -145,3 +145,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **350** Adding features to the bot is a proposal. All voting rules that apply to rule changes also apply to adding features to the bot. This rule does not apply to bug fixes.
 
 **351** *No More Nomads:** A player may not be active unless they have a village. All active players who do not have a village at the time of this proposal is accepted will be moved to inactive.
+
+**352** **Fast Track Bot:** Adding features to the bot only requires 50% or more of active players in order to reach quorum. This rule takes precendence over 311.
