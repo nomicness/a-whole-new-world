@@ -12,7 +12,7 @@ activePlayers:
             farms: 7
             hunger: -74
             sawmills: 2
-            lumber: 207
+            lumber: 226
             happiness: 0
     -
         name: jimmyhmiller
@@ -25,7 +25,7 @@ activePlayers:
                 logging: 13
             farms: 11
             hunger: -38
-            lumber: 30
+            lumber: 38
             sawmills: 1
             happiness: 0
     -
@@ -53,7 +53,7 @@ activePlayers:
             farms: 7
             hunger: -293
             sawmills: 1
-            lumber: 5
+            lumber: 19
 inactivePlayers:
     -
         name: rythompson
