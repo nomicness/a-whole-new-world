@@ -1,62 +1,63 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 962
+        points: 973
         village:
             name: Cormyr
             overseer: ArchmageInc
             population:
-                general: 89
-                farming: 12
+                general: 87
+                farming: 14
                 logging: 12
-            farms: 6
-            hunger: -59
+            farms: 7
+            hunger: -74
             sawmills: 2
-            lumber: 185
+            lumber: 226
             happiness: 0
     -
         name: jimmyhmiller
-        points: 373
+        points: 579
         village:
             name: Friesland
             population:
-                general: 83
+                general: 82
                 farming: 12
-                logging: 12
+                logging: 13
             farms: 11
-            hunger: -47
-            lumber: 23
+            hunger: -38
+            lumber: 38
             sawmills: 1
             happiness: 0
     -
         name: dilbertKocik
-        points: 231
+        points: 236
         village:
             name: 'Silicon Valley'
             population:
                 general: 64
                 farming: 8
             farms: 5
-            hunger: -7
+            hunger: -10
             lumber: 0
             happiness: 0
+    -
+        name: allensb
+        points: 137
+        village:
+            name: 'Space Port'
+            overseer: allensb
+            population:
+                general: 89
+                farming: 14
+                logging: 12
+            farms: 7
+            hunger: -293
+            sawmills: 1
+            lumber: 19
+inactivePlayers:
     -
         name: rythompson
         points: 57
     -
         name: thematrimix
         points: 36
-    -
-        name: allensb
-        points: 123
-        village:
-            name: 'Space Port'
-            overseer: allensb
-            population:
-                general: 101
-                farming: 14
-            farms: 7
-            hunger: -277
-            sawmills: 1
-            lumber: 0
-inactivePlayers: []
