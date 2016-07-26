@@ -30,7 +30,7 @@ activePlayers:
             happiness: 0
     -
         name: dilbertKocik
-        points: 231
+        points: 236
         village:
             name: 'Silicon Valley'
             population:
