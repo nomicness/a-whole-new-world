@@ -33,7 +33,7 @@ export const messages = {
 
 export const processVote = function (commentsUrl, userLogin, requestBody) {
     if (!expressions.ordinal.test(requestBody.issue.title)) {
-        return {message: 'No Ordnial: ' + requestBody.issue.title};
+        return {message: 'No Ordinal: ' + requestBody.issue.title};
     }
 
     const labelsUrl = requestBody.issue.labels_url;
@@ -126,7 +126,7 @@ export const processVote = function (commentsUrl, userLogin, requestBody) {
             });
             logger.log('  === Finished Counting ===');
 
-            hasQuorum = _.size(votes) >= quorum;
+            hasQuorum = _.size(votes) > quorum;
 
             if (hasQuorum) {
                 
