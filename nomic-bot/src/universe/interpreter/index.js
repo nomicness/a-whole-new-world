@@ -1,6 +1,7 @@
 // Import your interpreter here.
 import './updatePlayer';
 import './createComment';
+import './addLabel';
 
 
 // Exports
