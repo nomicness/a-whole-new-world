@@ -14,6 +14,13 @@ activePlayers:
             sawmills: 2
             lumber: 377
             happiness: 0
+inactivePlayers:
+    -
+        name: rythompson
+        points: 57
+    -
+        name: thematrimix
+        points: 36
     -
         name: jimmyhmiller
         points: 579
@@ -54,10 +61,3 @@ activePlayers:
             hunger: -384
             sawmills: 1
             lumber: 62
-inactivePlayers:
-    -
-        name: rythompson
-        points: 57
-    -
-        name: thematrimix
-        points: 36
