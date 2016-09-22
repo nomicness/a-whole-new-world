@@ -54,6 +54,18 @@ activePlayers:
             hunger: -391
             sawmills: 1
             lumber: 77
+    -
+        name: csouth
+        points: 0
+        village:
+            name: 'Gotham'
+            overseer: csouth
+            population:
+                general: 0
+            farms: 0
+            hunger: 0
+            sawmills: 0
+            lumber: 0
 inactivePlayers:
     -
         name: rythompson
