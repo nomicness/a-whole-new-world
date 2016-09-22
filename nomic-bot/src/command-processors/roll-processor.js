@@ -3,11 +3,50 @@ import * as github from '../utils/github.js';
 
 export const abusers = {};
 
-export const expressions = {
-    simple: /([0-9]+)\s*[dD]\s*([0-9]+)$/,
-    sum: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]*)$/,
-    subtraction: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\-\s*([0-9]*)$/
+export const roll = function (sides) {
+    return Math.round(Math.random() * (sides - 1) + 1);
 };
+
+export const simple = function (comment, response) {
+    _.defaults(response, {message: ''});
+
+    const rollInstruction = expressions.simple.match.exec(comment);
+    const dieCount = Number(rollInstruction[1]);
+    const sides = Number(rollInstruction[2]);
+
+    response.message += dieCount + 'd' + sides + '.';
+
+    return _.times(dieCount, _.partial(roll, sides));
+};
+
+export const sum = function (comment, response) {
+    _.defaults(response, {message: ''});
+
+    const rollInstruction = expressions.sum.match.exec(comment);
+    const dieCount = Number(rollInstruction[1]);
+    const sides = Number(rollInstruction[2]);
+    const add = Number(rollInstruction[3]);
+
+    response.message += dieCount + 'd' + sides + ' and add ' + add + ' to the total.';
+
+    return _.sum(_.times(dieCount, _.partial(roll, sides))) + add;
+};
+
+export const expressions = {
+    simple: {
+        match: /([0-9]+)\s*[dD]\s*([0-9]+)$/,
+        fn: simple,
+    },
+    sum: {
+        match: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\+\s*([0-9]*)$/,
+        fn: sum,
+    },
+    subtraction: {
+        match: /([0-9]+)\s*[dD]\s*([0-9]+)\s*\-\s*([0-9]*)$/,
+        fn: subtraction,
+    }
+};
+
 
 export const processRoll = function (commentsUrl, userLogin, requestBody) {
     const comment = requestBody.comment.body;
@@ -38,9 +77,9 @@ export const processRoll = function (commentsUrl, userLogin, requestBody) {
         return sendAbuseWarning(commentsUrl, userLogin);
     }
 
-    _.each(expressions, function (expression, methodName) {
-        if (expression.test(comment)) {
-            result = methodName(comment, response);
+    _.each(expressions, function (expression) {
+        if (expression.match.test(comment)) {
+            result = expression.fn(comment, response);
         }
     });
 
@@ -67,34 +106,6 @@ export const processRoll = function (commentsUrl, userLogin, requestBody) {
     return github.sendCommentMessage(commentsUrl, response.message);
 };
 
-export const roll = function (sides) {
-    return Math.round(Math.random() * (sides - 1) + 1);
-};
-
-export const simple = function (comment, response) {
-    _.defaults(response, {message: ''});
-
-    const rollInstruction = expressions.simple.exec(comment);
-    const dieCount = Number(rollInstruction[1]);
-    const sides = Number(rollInstruction[2]);
-
-    response.message += dieCount + 'd' + sides + '.';
-
-    return _.times(dieCount, _.partial(roll, sides));
-};
-
-export const sum = function (comment, response) {
-    _.defaults(response, {message: ''});
-
-    const rollInstruction = expressions.sum.exec(comment);
-    const dieCount = Number(rollInstruction[1]);
-    const sides = Number(rollInstruction[2]);
-    const add = Number(rollInstruction[3]);
-
-    response.message += dieCount + 'd' + sides + ' and add ' + add + ' to the total.';
-
-    return _.sum(_.times(dieCount, _.partial(roll, sides))) + add;
-};
 
 export const subtraction = function (comment, response) {
     _.defaults(response, {message: ''});
