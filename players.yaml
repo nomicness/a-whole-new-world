@@ -56,7 +56,7 @@ activePlayers:
             lumber: 77
     -
         name: csouth
-        points: 0
+        points: 14
         village:
             name: 'Gotham'
             overseer: csouth
