@@ -61,7 +61,7 @@ activePlayers:
             name: 'Gotham'
             overseer: csouth
             population:
-                general: 0
+                general: 103
             farms: 0
             hunger: 0
             sawmills: 0
