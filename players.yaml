@@ -61,7 +61,8 @@ activePlayers:
             name: Gotham
             overseer: csouth
             population:
-                general: 103
+                general: 93
+                farming: 10
             farms: 1
             hunger: 0
             sawmills: 0
