@@ -56,13 +56,13 @@ activePlayers:
             lumber: 77
     -
         name: csouth
-        points: 14
+        points: 4
         village:
-            name: 'Gotham'
+            name: Gotham
             overseer: csouth
             population:
                 general: 103
-            farms: 0
+            farms: 1
             hunger: 0
             sawmills: 0
             lumber: 0
