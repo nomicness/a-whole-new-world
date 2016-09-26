@@ -12,7 +12,7 @@ activePlayers:
             farms: 7
             hunger: -208
             sawmills: 2
-            lumber: 389
+            lumber: 404
             happiness: 0
     -
         name: jimmyhmiller
@@ -25,7 +25,7 @@ activePlayers:
                 logging: 13
             farms: 11
             hunger: -61
-            lumber: 129
+            lumber: 138
             sawmills: 1
             happiness: 0
     -
@@ -53,7 +53,7 @@ activePlayers:
             farms: 7
             hunger: -391
             sawmills: 1
-            lumber: 77
+            lumber: 83
     -
         name: csouth
         points: 4
