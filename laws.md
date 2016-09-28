@@ -147,3 +147,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **351** **No More Nomads:** A player may not be active unless they have a village. All active players who do not have a village at the time of this proposal is accepted will be moved to inactive.
 
 **352** **Fast Track Bot:** Adding features to the bot only requires 50% or more of active players in order to reach quorum. This rule takes precendence over 311.
+
+**353** **Make 'em happy:** Each week, a player may run the `/happy` command in order to add +1 to their village's happiness. This command must be run in the audit trail thread.
