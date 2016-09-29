@@ -25,13 +25,6 @@ export async function getAllComments({ commentsUrl }) {
     }
 }
 
-export async function getAllComments({ commentsUrl }) {
-    const comments = await github.getAllComments(commentsUrl);
-    return {
-        comments
-    }
-}
-
 export async function getPlayers() {
     const { activePlayers: players, inactivePlayers } = await github.getPlayerData()
     return {
