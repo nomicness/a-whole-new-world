@@ -1,4 +1,4 @@
-import { getPlayerData } from '../../utils/github';
+import * as github from '../../utils/github';
 import { find } from 'lodash';
 
 const labels = {
@@ -18,8 +18,15 @@ export const getCommentsUrl = ({ request }) => ({
     commentsUrl: request.issue.comments_url
 });
 
+export async function getAllComments({ commentsUrl }) {
+    const comments = await github.getAllComments(commentsUrl);
+    return {
+        comments
+    }
+}
+
 export async function getPlayers() {
-    const { activePlayers: players, inactivePlayers } = await getPlayerData()
+    const { activePlayers: players, inactivePlayers } = await github.getPlayerData()
     return {
         players,
         inactivePlayers,
@@ -29,6 +36,10 @@ export async function getPlayers() {
 export const getPlayer = ({ request, players }) => ({
     player: find(players, { name: request.comment.user.login })
 });
+
+export const getCommentsForPlayer = ({ comments, player }) => ({
+    playerComments: comments.filter(comment => comment.user.login === player.name)
+})
 
 export const getLabels = ({ request }) => ({
     issueLabels: request.issue.labels,
