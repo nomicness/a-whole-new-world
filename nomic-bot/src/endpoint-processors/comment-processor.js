@@ -49,7 +49,7 @@ export const processComment = function (request, responder) {
     const body = request.body;
     const issue = body.issue;
     const comment = body.comment;
-    if (body.action === 'created') {
+    if (body.action === 'created' && comment.user.login !== 'nomic-bot') {
         return processCommand(splitCommand(comment.body), { issue, comment, body })
             .then(trapUncaughtCommands(body))
             .then(_.partial(sendResponse, responder))
