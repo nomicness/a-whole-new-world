@@ -5,14 +5,15 @@ import { chain, startsWith } from 'lodash';
 
 addCommand('/happy', (_, { playerComments, player }) => {
     const now = moment();
-    const latestHappyCommentWeeks = chain(playerComments)
+    const happyInTheLastWeek = chain(playerComments)
         .filter(comment => startsWith(comment.body, '/happy'))
         .map(comment => now.diff(moment(comment.created_at), 'week'))
-        .min()
+        .filter(weeks => weeks < 1)
         .value()
+        .length
 
-    // Greater than one, because we shouldn't count the comment that started the command.
-    if (latestHappyCommentWeeks > 1) {
+    // There should only be one in the last week (the one that triggered this)
+    if (happyInTheLastWeek <= 1) {
         player.village.happiness += 1;
         return [
             updatePlayer(player),
