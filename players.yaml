@@ -13,7 +13,7 @@ activePlayers:
             hunger: -225
             sawmills: 2
             lumber: 404
-            happiness: 0
+            happiness: 1
     -
         name: jimmyhmiller
         points: 650
