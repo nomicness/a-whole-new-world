@@ -27,7 +27,7 @@ activePlayers:
             hunger: -65
             lumber: 138
             sawmills: 1
-            happiness: 0
+            happiness: 1
     -
         name: dilbertKocik
         points: 243
