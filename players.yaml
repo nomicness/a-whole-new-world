@@ -54,6 +54,7 @@ activePlayers:
             hunger: -397
             sawmills: 1
             lumber: 83
+            happiness: NaN
     -
         name: csouth
         points: 4
