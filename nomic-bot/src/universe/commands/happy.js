@@ -12,7 +12,6 @@ addCommand('/happy', (_, { playerComments, player }) => {
         .value()
         .length
 
-
     // There should only be one in the last week (the one that triggered this)
     if (happyInTheLastWeek <= 1) {
         player.village.happiness += 1;
