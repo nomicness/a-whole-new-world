@@ -39,7 +39,7 @@ activePlayers:
             farms: 5
             hunger: -38
             lumber: 0
-            happiness: 0
+            happiness: 1
     -
         name: allensb
         points: 144
