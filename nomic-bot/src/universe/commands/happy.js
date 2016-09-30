@@ -11,7 +11,8 @@ addCommand('/happy', (_, { playerComments, player }) => {
         .min()
         .value()
 
-    if (latestHappyCommentWeeks === undefined || latestHappyCommentWeeks >= 1) {
+    // Greater than one, because we shouldn't count the comment that started the command.
+    if (latestHappyCommentWeeks > 1) {
         player.village.happiness += 1;
         return [
             updatePlayer(player),
