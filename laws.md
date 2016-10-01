@@ -160,7 +160,7 @@ The following equations dictate the probability of each event occuring:
 ```
 const dogPeesPercent = (training) => -0.80 * training + 89
 const dogCutePercent = (training) => 0.7 * training + 10
-const dogPictPercent = (training) => 0.1 * training + 1
+const dogPicPercent = (training) => 0.1 * training + 1
 ```
 
 For example, at the very beginning, (0 training) you would have a 10% chance that your dog would do something cute (+1 Happiness), an 89% chance your dog would pee of the floor (-2 Happiness), and a 1% chance your dog would pose for a picture (+100 points).
