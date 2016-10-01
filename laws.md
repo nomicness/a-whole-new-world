@@ -149,3 +149,5 @@ Where N is the value of the population at the time of the calculation and H is t
 **352** **Fast Track Bot:** Adding features to the bot only requires 50% or more of active players in order to reach quorum. This rule takes precendence over 311.
 
 **353** **Make 'em happy:** Each week, a player may run the `/happy` command in order to add +1 to their village's happiness. This command must be run in the audit trail thread.
+
+**354** **Have a Dog:** Each player may recieve one dog by saying `/comehere [name]`. For example, `/comehere fido` would give you a dog named fido. A player may only have one dog.
