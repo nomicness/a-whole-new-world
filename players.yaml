@@ -16,7 +16,7 @@ activePlayers:
             happiness: 1
     -
         name: jimmyhmiller
-        points: 650
+        points: 655
         village:
             name: Friesland
             population:
@@ -30,7 +30,7 @@ activePlayers:
             happiness: 1
     -
         name: dilbertKocik
-        points: 243
+        points: 249
         village:
             name: 'Silicon Valley'
             population:
@@ -42,7 +42,7 @@ activePlayers:
             happiness: 1
     -
         name: allensb
-        points: 144
+        points: 150
         village:
             name: 'Space Port'
             overseer: allensb
