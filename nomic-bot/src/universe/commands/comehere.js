@@ -1,7 +1,4 @@
 import { addCommand, updatePlayer, createComment } from './index';
-import moment from 'moment';
-import { chain, startsWith } from 'lodash';
-
 
 addCommand('/comehere', ({ args: [ name ] }, { player }) => {
 
