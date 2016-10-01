@@ -2,6 +2,7 @@
 import './allocate';
 import './open';
 import './happy';
+import './comehere';
 
 
 // Exports
