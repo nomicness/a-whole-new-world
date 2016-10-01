@@ -151,3 +151,17 @@ Where N is the value of the population at the time of the calculation and H is t
 **353** **Make 'em happy:** Each week, a player may run the `/happy` command in order to add +1 to their village's happiness. This command must be run in the audit trail thread.
 
 **354** **Have a Dog:** Each player may recieve one dog by saying `/comehere [name]`. For example, `/comehere fido` would give you a dog named fido. A player may only have one dog.
+
+**355** **Train your Dog:** A dog should be trained. Each dog starts off with 0 training. A dog cannot have more than 100 training. Each week you may increase your dog's training by 10 by running the `/train` command. This command must be run in the audit trail.
+
+Each week one of three events will happen. You dog will pee on the floor (-2 Happiness). Your dog will do something cute (+1 Happiness). Your dog will pose for a picture which you can post for karma (+100 points). 
+
+The following equations dictate the probability of each event occuring:
+```
+const dogPeesPercent = (training) => -0.80 * training + 89
+const dogCutePercent = (training) => 0.7 * training + 10
+const dogPictPercent = (training) => 0.1 * training + 1
+```
+
+For example, at the very beginning, (0 training) you would have a 10% chance that your dog would do something cute (+1 Happiness), an 89% chance your dog would pee of the floor (-2 Happiness), and a 1% chance your dog would pose for a picture (+100 points).
+
