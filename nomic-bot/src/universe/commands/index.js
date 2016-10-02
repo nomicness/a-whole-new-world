@@ -2,9 +2,10 @@
 import './allocate';
 import './open';
 import './happy';
+import './train';
 
 
 // Exports
-export { addCommand } from './utils';
+export * from './utils';
 export * from '../actions';
 export default from './utils';
