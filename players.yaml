@@ -59,6 +59,8 @@ activePlayers:
             sawmills: 1
             lumber: 93
             happiness: 1
+        dog:
+            name: Elon
     -
         name: csouth
         points: 4
