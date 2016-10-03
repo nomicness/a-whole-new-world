@@ -1,59 +1,77 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 886
+        points: 983
         village:
             name: Cormyr
             overseer: ArchmageInc
             population:
-                general: 88
-                farming: 12
+                general: 89
+                farming: 14
                 logging: 12
-            farms: 6
-            hunger: -58
+            farms: 7
+            hunger: -225
             sawmills: 2
-            lumber: 150
+            lumber: 404
+            happiness: 1
     -
         name: jimmyhmiller
-        points: 240
+        points: 718
         village:
             name: Friesland
             population:
-                general: 82
+                general: 84
                 farming: 12
-                logging: 12
+                logging: 13
             farms: 11
-            hunger: -33
-            lumber: 0
+            hunger: -65
+            lumber: 138
             sawmills: 1
+            happiness: 1
     -
         name: dilbertKocik
-        points: 217
+        points: 249
         village:
             name: 'Silicon Valley'
             population:
                 general: 64
                 farming: 8
             farms: 5
-            hunger: -7
+            hunger: -38
             lumber: 0
+            happiness: 1
+    -
+        name: allensb
+        points: 150
+        village:
+            name: 'Space Port'
+            overseer: allensb
+            population:
+                general: 91
+                farming: 14
+                logging: 12
+            farms: 7
+            hunger: -397
+            sawmills: 1
+            lumber: 83
+            happiness: 1
+    -
+        name: csouth
+        points: 4
+        village:
+            name: Gotham
+            overseer: csouth
+            population:
+                general: 94
+                farming: 10
+            farms: 1
+            hunger: 87
+            sawmills: 0
+            lumber: 0
+inactivePlayers:
     -
         name: rythompson
         points: 57
     -
         name: thematrimix
         points: 36
-    -
-        name: allensb
-        points: 123
-        village:
-            name: 'Space Port'
-            overseer: allensb
-            population:
-                general: 100
-                farming: 14
-            farms: 7
-            hunger: -259
-            sawmills: 1
-            lumber: 0
-inactivePlayers: []

@@ -8,8 +8,6 @@
 
 **104.** All proposals proposed in the proper way shall be voted on. They will be adopted if and only if they receive the required number of votes.
 
-**105.** A player may only have one active proposal at a time. The player may cancel that proposal they have created at any time. If they cancel a proposal the proposal is not accepted.
-
 **106.** All proposed rule-changes shall be written down before they are voted on. If they are adopted, they shall guide play in the form in which they were voted on.
 
 **107.** No rule-change may take effect earlier than the moment of the completion of the vote that adopted it, even if its wording explicitly states otherwise. No rule-change may have retroactive application.
@@ -139,3 +137,17 @@ Where N is the value of the population at the time of the calculation and H is t
 **345.** **SAWMILL PURCHASES:** All players with a village may purchase sawmills for one hundred (100) points each. Sawmills produce Lumber.
 
 **346.** **SAWMILL PRODUCTION:** Each Sawmill will produce 1d12+3 lumber per week as long as six (6) villagers per sawmill are allocated to the logging endevor. 
+
+**347.** **Synthetic Materials:** Any production of Synthetic Materials (Materials artificially created through chemical reactions) within a village reduces farm output by eight (8) units.
+
+**348.** **Happiness:** Each village has a happiness level. Each village starts off with 0 Happiness. Happiness ranges from -5 to +5. Happiness may only be changed in a village as explicitly stated in the rules.
+
+**350** Adding features to the bot is a proposal. All voting rules that apply to rule changes also apply to adding features to the bot. This rule does not apply to bug fixes.
+
+**351** **No More Nomads:** A player may not be active unless they have a village. All active players who do not have a village at the time of this proposal is accepted will be moved to inactive.
+
+**352** **Fast Track Bot:** Adding features to the bot only requires 50% or more of active players in order to reach quorum. This rule takes precendence over 311.
+
+**353** **Make 'em happy:** Each week, a player may run the `/happy` command in order to add +1 to their village's happiness. This command must be run in the audit trail thread.
+
+**354** **Have a Dog:** Each player may recieve one dog by saying `/comehere [name]`. For example, `/comehere fido` would give you a dog named fido. A player may only have one dog.
