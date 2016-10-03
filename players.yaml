@@ -15,7 +15,7 @@ activePlayers:
             lumber: 416
             happiness: 1
         dog:
-            name: bowser
+            name: Bowser
     -
         name: jimmyhmiller
         points: 726
