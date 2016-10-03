@@ -30,6 +30,8 @@ activePlayers:
             lumber: 138
             sawmills: 1
             happiness: 1
+        dog:
+            name: Lemon
     -
         name: dilbertKocik
         points: 249
