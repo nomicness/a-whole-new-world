@@ -6,6 +6,6 @@ import './comehere';
 
 
 // Exports
-export { addCommand } from './utils';
+export * from './utils';
 export * from '../actions';
 export default from './utils';
