@@ -10,7 +10,7 @@ activePlayers:
                 farming: 14
                 logging: 12
             farms: 7
-            hunger: -225
+            hunger: -247
             sawmills: 2
             lumber: 416
             happiness: 1
@@ -26,7 +26,7 @@ activePlayers:
                 farming: 12
                 logging: 13
             farms: 11
-            hunger: -65
+            hunger: -63
             lumber: 146
             sawmills: 1
             happiness: 1
@@ -41,7 +41,7 @@ activePlayers:
                 general: 64
                 farming: 8
             farms: 5
-            hunger: -38
+            hunger: -46
             lumber: 0
             happiness: 1
     -
@@ -55,7 +55,7 @@ activePlayers:
                 farming: 14
                 logging: 12
             farms: 7
-            hunger: -397
+            hunger: -392
             sawmills: 1
             lumber: 93
             happiness: 1
@@ -68,10 +68,10 @@ activePlayers:
             name: Gotham
             overseer: csouth
             population:
-                general: 94
+                general: 7
                 farming: 10
             farms: 1
-            hunger: 87
+            hunger: 0
             sawmills: 0
             lumber: 0
 inactivePlayers:
