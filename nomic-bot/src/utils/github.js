@@ -5,6 +5,7 @@ import atob from 'atob';
 import YAML from 'yamljs';
 import btoa from 'btoa';
 import Q from 'q';
+import parseLinkHeader from 'parse-link-header';
 const githubAuth = process.env.GITHUB_AUTH;
 const testing = process.env.TESTING || false;
 const logReads = process.env.LOG_READS || false;
@@ -39,12 +40,14 @@ function processResponse(deferred, request, response) {
 }
 
 function getLastPageNumber(linkHeader) {
-    const expression = /page=([0-9]+).*rel="last"/i;
-    if (!linkHeader || !_.isString(linkHeader) || !expression.test(linkHeader)) {
+    if (!linkHeader) {
         return 1;
     }
-    
-    return expression.exec(linkHeader.substr(linkHeader.lastIndexOf('page')))[1];
+    const last = parseLinkHeader(linkHeader).last;
+    if (!last) {
+        return 1;
+    }
+    return Number(last.page);
 }
 
 function mockWrite(options, method) {
@@ -219,6 +222,7 @@ export const getAllComments = function (commentsUrl) {
     return get({
         path: commentsUrl
     }).then(function (commentPage) {
+        console.log(commentPage._meta.lastPage)
         if (commentPage._meta.lastPage && commentPage._meta.lastPage !== 1) {
             const promises = _.times(commentPage._meta.lastPage, function (n) {
                 return get({
@@ -226,6 +230,9 @@ export const getAllComments = function (commentsUrl) {
                     query: {
                         page: n + 1
                     }
+                }).catch(e => {
+                    console.log(n);
+                    console.trace(e);
                 });
             });
             return Q.all(promises)
@@ -233,8 +240,9 @@ export const getAllComments = function (commentsUrl) {
                     _.each(resultSet, function (results) {
                         comments = comments.concat(results);
                     });
+                    console.log('comments');
                     return comments;
-                });
+                })
         }
         
         return commentPage;
