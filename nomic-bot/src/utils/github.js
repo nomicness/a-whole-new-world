@@ -222,7 +222,6 @@ export const getAllComments = function (commentsUrl) {
     return get({
         path: commentsUrl
     }).then(function (commentPage) {
-        console.log(commentPage._meta.lastPage)
         if (commentPage._meta.lastPage && commentPage._meta.lastPage !== 1) {
             const promises = _.times(commentPage._meta.lastPage, function (n) {
                 return get({
@@ -230,17 +229,13 @@ export const getAllComments = function (commentsUrl) {
                     query: {
                         page: n + 1
                     }
-                }).catch(e => {
-                    console.log(n);
-                    console.trace(e);
-                });
+                })
             });
             return Q.all(promises)
                 .then(function (resultSet) {
                     _.each(resultSet, function (results) {
                         comments = comments.concat(results);
                     });
-                    console.log('comments');
                     return comments;
                 })
         }
