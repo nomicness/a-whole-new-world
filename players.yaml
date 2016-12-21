@@ -10,7 +10,7 @@ activePlayers:
                 farming: 14
                 logging: 12
             farms: 7
-            hunger: -432
+            hunger: -446
             sawmills: 2
             lumber: 609
             happiness: 1
@@ -22,11 +22,11 @@ activePlayers:
         village:
             name: Friesland
             population:
-                general: 277
+                general: 121
                 farming: 12
                 logging: 13
             farms: 16
-            hunger: 156
+            hunger: 29
             lumber: 249
             sawmills: 1
             happiness: 1
@@ -41,7 +41,7 @@ activePlayers:
                 general: 64
                 farming: 8
             farms: 5
-            hunger: -61
+            hunger: -63
             lumber: 0
             happiness: 1
     -
@@ -55,7 +55,7 @@ activePlayers:
                 farming: 14
                 logging: 12
             farms: 7
-            hunger: -492
+            hunger: -505
             sawmills: 1
             lumber: 220
             happiness: 1
