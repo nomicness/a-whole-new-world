@@ -6,8 +6,8 @@ activePlayers:
             name: Cormyr
             overseer: ArchmageInc
             population:
-                general: 91
-                farming: 14
+                general: 89
+                farming: 16
                 logging: 12
             farms: 7
             hunger: -446
