@@ -18,15 +18,15 @@ activePlayers:
             name: Bowser
     -
         name: jimmyhmiller
-        points: 730
+        points: 720
         village:
             name: Friesland
             population:
                 general: 111
                 farming: 22
                 logging: 13
-            farms: 17
-            hunger: 11
+            farms: 18
+            hunger: -12
             lumber: 249
             sawmills: 1
             happiness: 2
