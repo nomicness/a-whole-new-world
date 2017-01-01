@@ -6,7 +6,7 @@ activePlayers:
             name: Cormyr
             overseer: ArchmageInc
             population:
-                general: 89
+                general: 90
                 farming: 16
                 logging: 12
             farms: 7
@@ -22,7 +22,7 @@ activePlayers:
         village:
             name: Friesland
             population:
-                general: 111
+                general: 112
                 farming: 22
                 logging: 13
             farms: 18
@@ -38,7 +38,7 @@ activePlayers:
         village:
             name: 'Silicon Valley'
             population:
-                general: 64
+                general: 66
                 farming: 8
             farms: 5
             hunger: -66
@@ -51,7 +51,7 @@ activePlayers:
             name: 'Space Port'
             overseer: allensb
             population:
-                general: 93
+                general: 94
                 farming: 14
                 logging: 12
             farms: 7
