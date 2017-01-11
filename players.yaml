@@ -74,6 +74,7 @@ activePlayers:
             hunger: -90
             sawmills: 0
             lumber: 0
+            happiness: 1
 inactivePlayers:
     -
         name: rythompson
