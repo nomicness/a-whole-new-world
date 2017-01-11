@@ -63,15 +63,15 @@ activePlayers:
             name: Elon
     -
         name: csouth
-        points: 14
+        points: 4
         village:
             name: Gotham
             overseer: csouth
             population:
                 general: 3
                 farming: 10
-            farms: 1
-            hunger: -67
+            farms: 2
+            hunger: -90
             sawmills: 0
             lumber: 0
 inactivePlayers:
