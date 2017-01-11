@@ -161,3 +161,4 @@ const dogPicPercent = (training) => 0.1 * training + 1
 
 For example, at the very beginning, (0 training) you would have a 10% chance that your dog would do something cute (+1 Happiness), an 89% chance your dog would pee of the floor (-2 Happiness), and a 1% chance your dog would pose for a picture (+100 points).
 
+**358** **THE END:** It is declared that the game of nomic has come to an end and the player Brandon Brooks, also known as ArchmageInc is the winner.
