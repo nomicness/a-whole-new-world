@@ -1,7 +1,7 @@
 activePlayers:
     -
         name: ArchmageInc
-        points: 1132
+        points: 1140
         village:
             name: Cormyr
             overseer: ArchmageInc
@@ -34,7 +34,7 @@ activePlayers:
             name: Lemon
     -
         name: dilbertKocik
-        points: 259
+        points: 268
         village:
             name: 'Silicon Valley'
             population:
@@ -63,7 +63,7 @@ activePlayers:
             name: Elon
     -
         name: csouth
-        points: 4
+        points: 14
         village:
             name: Gotham
             overseer: csouth
