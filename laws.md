@@ -69,8 +69,6 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **311.** A proposal must be voted on by more than 50% of active players (a quorum) in order to be resolved (accepted or rejected) unless otherwise noted in the rules. Any time after a proposal has reached a quorum it may be resolved by its creator. A rule-change is a proposal.
 
-**316.** No law may target a specific player.
-
 **317.** A player cannot have negative points.
 
 **318.** A player may not vote on a rule-change proposal if he/she has not yet voted on a lower ordinal, rule-change proposal which is in an "Open for Voting" state.
