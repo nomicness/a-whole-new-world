@@ -2,8 +2,6 @@
 
 **101.** All players must always abide by all the rules then in effect, in the form in which they are then in effect. The rules in the Initial Set are in effect whenever a game begins.
 
-**102.** No rule may make it possible for a player to win the game or end the game.
-
 **103.** A rule-change is any of the following: (1) the enactment, repeal, or amendment of a rule; (2) the enactment, repeal, or amendment of an amendment of a rule.
 
 **104.** All rule-changes proposed in the proper way shall be voted on. They will be adopted if and only if they receive the required number of votes.
