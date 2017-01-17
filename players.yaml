@@ -29,7 +29,7 @@ activePlayers:
             hunger: -173
             lumber: 294
             sawmills: 1
-            happiness: 2
+            happiness: 3
         dog:
             name: Lemon
     -
