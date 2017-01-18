@@ -10,7 +10,7 @@ activePlayers:
                 farming: 0
                 logging: 12
             farms: 7
-            hunger: -501
+            hunger: -383
             sawmills: 2
             lumber: 693
             happiness: 4
@@ -26,7 +26,7 @@ activePlayers:
                 farming: 22
                 logging: 13
             farms: 18
-            hunger: -173
+            hunger: -218
             lumber: 294
             sawmills: 1
             happiness: 3
@@ -55,7 +55,7 @@ activePlayers:
                 farming: 14
                 logging: 12
             farms: 7
-            hunger: -577
+            hunger: -590
             sawmills: 1
             lumber: 248
             happiness: 1
@@ -71,7 +71,7 @@ activePlayers:
                 general: 3
                 farming: 10
             farms: 2
-            hunger: -90
+            hunger: -123
             sawmills: 0
             lumber: 0
             happiness: 1
