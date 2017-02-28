@@ -13,7 +13,7 @@ activePlayers:
             hunger: -5
             sawmills: 2
             lumber: 804
-            happiness: 4
+            happiness: 5
         dog:
             name: Bowser
     -
