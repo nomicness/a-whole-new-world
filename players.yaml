@@ -34,14 +34,14 @@ activePlayers:
             name: Lemon
     -
         name: dilbertKocik
-        points: 278
+        points: 268
         village:
             name: 'Silicon Valley'
             population:
                 general: 79
                 farming: 8
-            farms: 5
-            hunger: 0
+            farms: 6
+            hunger: -24
             lumber: 0
             happiness: 1
     -
