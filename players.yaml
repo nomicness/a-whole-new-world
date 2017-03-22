@@ -38,8 +38,8 @@ activePlayers:
         village:
             name: 'Silicon Valley'
             population:
-                general: 79
-                farming: 8
+                general: 75
+                farming: 12
             farms: 6
             hunger: -24
             lumber: 0
