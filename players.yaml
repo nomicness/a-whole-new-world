@@ -10,7 +10,7 @@ activePlayers:
                 farming: 8
                 logging: 12
             farms: 12
-            hunger: -52
+            hunger: -81
             sawmills: 2
             lumber: 867
             happiness: 5
@@ -26,7 +26,7 @@ activePlayers:
                 farming: 22
                 logging: 13
             farms: 18
-            hunger: -572
+            hunger: -618
             lumber: 387
             sawmills: 1
             happiness: 3
@@ -38,10 +38,10 @@ activePlayers:
         village:
             name: 'Silicon Valley'
             population:
-                general: 84
+                general: 79
                 farming: 8
             farms: 5
-            hunger: 5
+            hunger: 0
             lumber: 0
             happiness: 1
     -
