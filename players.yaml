@@ -22,7 +22,7 @@ activePlayers:
         village:
             name: Friesland
             population:
-                general: 114
+                general: 115
                 farming: 22
                 logging: 13
             farms: 18
@@ -38,7 +38,7 @@ activePlayers:
         village:
             name: 'Silicon Valley'
             population:
-                general: 75
+                general: 76
                 farming: 12
             farms: 6
             hunger: -42
@@ -51,7 +51,7 @@ activePlayers:
             name: 'Space Port'
             overseer: allensb
             population:
-                general: 96
+                general: 97
                 farming: 14
                 logging: 12
             farms: 7
