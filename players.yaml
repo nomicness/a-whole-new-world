@@ -12,7 +12,7 @@ activePlayers:
             farms: 12
             hunger: -698
             sawmills: 2
-            lumber: 1338
+            lumber: 1368
             happiness: 5
         dog:
             name: Bowser
@@ -27,7 +27,7 @@ activePlayers:
                 logging: 13
             farms: 18
             hunger: -1863
-            lumber: 612
+            lumber: 620
             sawmills: 1
             happiness: 4
         dog:
@@ -57,7 +57,7 @@ activePlayers:
             farms: 7
             hunger: -790
             sawmills: 1
-            lumber: 566
+            lumber: 579
             happiness: 1
         dog:
             name: Elon
