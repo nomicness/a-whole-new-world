@@ -22,7 +22,7 @@ activePlayers:
         village:
             name: Friesland
             population:
-                general: 125
+                general: 126
                 farming: 22
                 logging: 13
             farms: 18
@@ -51,7 +51,7 @@ activePlayers:
             name: 'Space Port'
             overseer: allensb
             population:
-                general: 107
+                general: 108
                 farming: 14
                 logging: 12
             farms: 7
