@@ -32,6 +32,13 @@ activePlayers:
             happiness: 4
         dog:
             name: Lemon
+inactivePlayers:
+    -
+        name: rythompson
+        points: 57
+    -
+        name: thematrimix
+        points: 36
     -
         name: dilbertKocik
         points: 268
@@ -75,10 +82,3 @@ activePlayers:
             sawmills: 0
             lumber: 0
             happiness: 1
-inactivePlayers:
-    -
-        name: rythompson
-        points: 57
-    -
-        name: thematrimix
-        points: 36
