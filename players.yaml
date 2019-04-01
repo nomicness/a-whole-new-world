@@ -22,7 +22,7 @@ activePlayers:
         village:
             name: Friesland
             population:
-                general: 135
+                general: 136
                 farming: 22
                 logging: 13
             farms: 18
