@@ -128,8 +128,6 @@ Where N is the value of the population at the time of the calculation and H is t
 
 **342.** **FARMING ENDEAVOR:** Each farm requires 2 villagers allocated to the farming endeavor in order to produce.
 
-**344.** **INITIAL PLAYER POINTS:** New Players, upon their first creation, will be awarded an initial point value set by a roll (1d12 + 12).
-
 **345.** **SAWMILL PURCHASES:** All players with a village may purchase sawmills for one hundred (100) points each. Sawmills produce Lumber.
 
 **346.** **SAWMILL PRODUCTION:** Each Sawmill will produce 1d12+3 lumber per week as long as six (6) villagers per sawmill are allocated to the logging endevor. 
@@ -161,3 +159,4 @@ const dogPicPercent = (training) => 0.1 * training + 1
 
 For example, at the very beginning, (0 training) you would have a 10% chance that your dog would do something cute (+1 Happiness), an 89% chance your dog would pee of the floor (-2 Happiness), and a 1% chance your dog would pose for a picture (+100 points).
 
+**358** **INITIAL PLAYER POINTS:** New Players, upon their first creation, will be awarded an initial point value of 500.
