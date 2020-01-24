@@ -4,19 +4,19 @@
 
 **103.** A rule-change is any of the following: (1) the enactment, repeal, or amendment of a rule; (2) the enactment, repeal, or amendment of an amendment of a rule.
 
-**104.** All rule-changes proposed in the proper way shall be voted on. They will be adopted if and only if they receive the required number of votes.
+**104.** All proposals proposed in the proper way shall be voted on. They will be adopted if and only if they receive the required number of votes.
 
 **106.** All proposed rule-changes shall be written down before they are voted on. If they are adopted, they shall guide play in the form in which they were voted on.
 
 **107.** No rule-change may take effect earlier than the moment of the completion of the vote that adopted it, even if its wording explicitly states otherwise. No rule-change may have retroactive application.
 
-**108.** Each proposed rule-change shall be given a number for reference. The numbers shall begin with 301, and each rule-change proposed in the proper way shall receive the next successive integer, whether or not the proposal is adopted.
+**108.** Each proposal shall be given a number for reference. The numbers shall begin with 301, and each proposal proposed in the proper way shall receive the next successive integer, whether or not the proposal is adopted.
 
 If a rule is repealed and reenacted, it receives the number of the proposal to reenact it. If a rule is amended it receives the number of the proposal to amend  it. If an amendment is amended or repealed, the entire rule of which it is a part receives the number of the proposal to amend or repeal the amendment.
 
 **110.** In order for a player to be active they must be on the active players list. Any player can make a proposal for another player(s) to be declared inactive. A player will be declared inactive if the following criteria have been met: (1) A majority of active players, minus the players who are being declared inactive, must accept the proposal, (2) a 24 hour business day must have passed from the time the proposal was created, (3) none of the players who are being declared inactive have performed any action since the proposal was created. The creator of the proposal may cancel their proposal at any time.
 
-**111.** If a rule-change as proposed is unclear, ambiguous, paradoxical, or destructive of play, or if it arguably consists of two or more rule-changes compounded or is an amendment that makes no difference, or if it is otherwise of questionable value, then the other players may suggest amendments or argue against the proposal before the vote. A reasonable time must be allowed for this debate. The proponent decides the final form in which the proposal is to be voted on and, unless the Judge has been asked to do so, also decides the time to end debate and vote.
+**111.** If a rule-change as proposed is unclear, ambiguous, paradoxical, or destructive of play, or is an amendment that makes no difference, or if it is otherwise of questionable value, then the other players may suggest amendments or argue against the proposal before the vote. A reasonable time must be allowed for this debate. The proponent decides the final form in which the proposal is to be voted on and, unless the Judge has been asked to do so, also decides the time to end debate and vote.
 
 **112.** A player may add themselves to the active players list to become active. No individual may control more than one active player.
 
@@ -28,9 +28,9 @@ If a rule is repealed and reenacted, it receives the number of the proposal to r
 
 **116.** Whatever is not prohibited or regulated by a rule is permitted and unregulated, with the sole exception of changing the rules, which is permitted only when a rule or set of rules explicitly or implicitly permits it.
 
-**202.** One turn consists of two parts in this order: (1) proposing one rule-change and having it voted on, and (2) throwing one die once and adding the number of points on its face to one's score.
+**117.** A proposal can be a rule-change or collection of rule-changes.
 
-In mail and computer games, instead of throwing a die, players subtract 291 from the ordinal number of their proposal and multiply the result by the fraction of favorable votes it received, rounded to the nearest integer. (This yields a number between 0 and 10 for the first player, with the upper limit increasing by one each turn; more points are awarded for more popular proposals.)
+**202.** A player may submit a proposal at any time. After the proposal is resolved points will be rewarded to the player using the following formula: subtract 291 from the ordinal number of the proposal and multiply the result by the fraction of favorable votes it received, rounded to the nearest integer.
 
 **205.** An adopted rule-change takes full effect at the moment of the completion of the vote that adopted it.
 
@@ -57,7 +57,7 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **305.** No player may be a judge in a dispute in which they are involved.
 
-**306.** PARSING PROPOSALS: A rule-change proposal must be submitted as a PR to the repository with a title which begins with only the numerical ordinal of the proposed rule. No other characters may preceed this number, and the number may not be written in word form.
+**306.** PARSING PROPOSALS: A proposal must be submitted as a PR to the repository with a title which begins with only the numerical ordinal of the proposed rule. No other characters may preceed this number, and the number may not be written in word form.
 
 **307.** PARSING VOTES: Only the most recent vote will be counted. All other votes by a given player will be ignored.
 
@@ -69,13 +69,13 @@ It is important, for parsing, that no other non-space characters be included in 
 
 **317.** A player cannot have negative points.
 
-**318.** A player may not vote on a rule-change proposal if he/she has not yet voted on a lower ordinal, rule-change proposal which is in an "Open for Voting" state.
+**318.** A player may not vote on a proposal if he/she has not yet voted on a lower ordinal, proposal which is in an "Open for Voting" state.
 
-**319.** VOTING INCENTIVE: All players who vote on rule-change proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
+**319.** VOTING INCENTIVE: All players who vote on a proposal shall roll 2d6+1 and receive a number of points equal to the value of the roll if and only if the proposal reaches a quorum.
 
 **321.** Declarations of War made before this law was inacted are null and void. All open declarations should be closed.
 
-**325.** In order for a rule-change proposal to be adopted once a quorum is reached, more than 50% of the votes must be positive (yay). In the event of a tie, the proposal may either be removed by the creator, or it may remain open until the tie is broken.
+**325.** In order for a proposal to be adopted once a quorum is reached, more than 50% of the votes must be positive (yay). In the event of a tie, the proposal may either be removed by the creator, or it may remain open until the tie is broken.
 
 **327.** **VILLAGES:** This rule governs initial village definitions.
 
