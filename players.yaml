@@ -16,6 +16,7 @@ activePlayers:
             happiness: 5
         dog:
             name: Bowser
+inactivePlayers:
     -
         name: jimmyhmiller
         points: 734
@@ -32,8 +33,7 @@ activePlayers:
             happiness: 4
         dog:
             name: Lemon
-inactivePlayers:
-    -
+-
         name: rythompson
         points: 57
     -
