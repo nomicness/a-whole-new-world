@@ -1,22 +1,5 @@
 activePlayers:
     -
-        name: ArchmageInc
-        points: 1099
-        village:
-            name: Cormyr
-            overseer: ArchmageInc
-            population:
-                general: 26
-                farming: 8
-                logging: 12
-            farms: 12
-            hunger: -3655
-            sawmills: 2
-            lumber: 3486
-            happiness: 5
-        dog:
-            name: Bowser
-    -
         name: jimmyhmiller
         points: 734
         village:
@@ -33,6 +16,24 @@ activePlayers:
         dog:
             name: Lemon
 inactivePlayers:
+    -
+        name: ArchmageInc
+        points: 1099
+        village:
+            name: Cormyr
+            overseer: ArchmageInc
+            population:
+                general: 26
+                farming: 8
+                logging: 12
+            farms: 12
+            hunger: -3655
+            sawmills: 2
+            lumber: 3486
+            happiness: 5
+        dog:
+            name: Bowser
+
     -
         name: rythompson
         points: 57
