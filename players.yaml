@@ -15,8 +15,7 @@ activePlayers:
             happiness: 4
         dog:
             name: Lemon
-inactivePlayers:
-    -
+   -
         name: ArchmageInc
         points: 1099
         village:
@@ -33,7 +32,7 @@ inactivePlayers:
             happiness: 5
         dog:
             name: Bowser
-
+inactivePlayers:
     -
         name: rythompson
         points: 57
