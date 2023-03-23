@@ -1,20 +1,4 @@
 activePlayers:
-    -
-        name: jimmyhmiller
-        points: 734
-        village:
-            name: Friesland
-            population:
-                general: 139
-                farming: 22
-                logging: 13
-            farms: 18
-            hunger: -5820
-            lumber: 1662
-            sawmills: 1
-            happiness: 4
-        dog:
-            name: Lemon
    -
         name: ArchmageInc
         points: 1099
@@ -33,6 +17,22 @@ activePlayers:
         dog:
             name: Bowser
 inactivePlayers:
+    -
+        name: jimmyhmiller
+        points: 734
+        village:
+            name: Friesland
+            population:
+                general: 139
+                farming: 22
+                logging: 13
+            farms: 18
+            hunger: -5820
+            lumber: 1662
+            sawmills: 1
+            happiness: 4
+        dog:
+            name: Lemon
     -
         name: rythompson
         points: 57
